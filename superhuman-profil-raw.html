@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superhuman Profil – 06.03.1994</title>
+<link href="https://fonts.googleapis.com/css2?family=Belleza&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#7B6047;--gold-light:#A08060;--gold-dim:#4A3018;--deep:#FFFBED;--card:#F0E8D8;--card2:#E8DEC8;--text:#3D2B1A;--muted:#9A8878;--accent:#8B7355;--accent2:#A08060;--accent3:#6B8B60;--red:#A05040;--border:rgba(74,48,24,0.15);--radius:12px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--deep);color:var(--text);font-family:'Belleza',sans-serif;font-size:15px;line-height:1.7;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 15% 25%,rgba(123,96,71,0.05) 0%,transparent 50%),radial-gradient(circle at 85% 70%,rgba(190,176,154,0.05) 0%,transparent 50%);pointer-events:none;z-index:0}
+.wrapper{position:relative;z-index:1;max-width:1060px;margin:0 auto;padding:0 20px 80px}
+.hero{text-align:center;padding:60px 20px 50px;border-bottom:1px solid var(--border);margin-bottom:48px}
+.hero-eyebrow{font-family:'Caveat',cursive;font-size:18px;letter-spacing:2px;color:var(--gold-dim);margin-bottom:18px}
+.hero h1{font-family:'Belleza',sans-serif;font-size:clamp(28px,5vw,54px);font-weight:400;color:var(--gold);line-height:1.15;margin-bottom:10px}
+.hero-sub{font-family:'Caveat',cursive;font-size:16px;color:var(--muted);letter-spacing:1px;margin-bottom:36px}
+.planet-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 16px;margin-top:28px}
+.planet-chip{display:flex;flex-direction:column;align-items:center;gap:3px}
+.planet-symbol{font-size:22px;line-height:1}
+.planet-label{font-size:10px;color:var(--gold-dim);letter-spacing:1px;text-transform:uppercase}
+.planet-deg{font-size:11px;color:var(--muted)}
+.nav-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:40px;position:sticky;top:0;background:rgba(255,251,237,0.96);backdrop-filter:blur(10px);padding:12px 0;z-index:100;border-bottom:1px solid var(--border)}
+.nav-tab{padding:6px 14px;font-size:12px;font-family:'Belleza',sans-serif;letter-spacing:.5px;color:var(--muted);border:1px solid transparent;border-radius:20px;cursor:pointer;background:none;transition:all .2s;white-space:nowrap}
+.nav-tab:hover,.nav-tab.active{color:var(--gold);border-color:var(--gold-dim);background:rgba(123,96,71,0.08)}
+.section{margin-bottom:60px;scroll-margin-top:80px}
+.section-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.section-number{font-family:'Caveat',cursive;font-size:16px;color:var(--gold-dim);letter-spacing:2px;min-width:32px}
+.section-title{font-family:'Belleza',sans-serif;font-size:clamp(16px,2.5vw,22px);color:var(--gold);font-weight:400}
+.section-icon{margin-left:auto;font-size:24px;opacity:.4}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;margin-bottom:14px;box-shadow:0 2px 8px rgba(74,48,24,0.05)}
+.card-title{font-family:'Belleza',sans-serif;font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:10px;text-transform:uppercase}
+.card p{color:var(--text);font-size:14px;margin-bottom:8px}
+.card p:last-child{margin-bottom:0}
+.card em{color:var(--gold-dim);font-style:normal;font-weight:700}
+.card small{color:var(--muted);font-size:12px;font-style:italic}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.astro-table{width:100%;border-collapse:collapse;font-size:13px}
+.astro-table th{font-family:'Belleza',sans-serif;font-size:11px;color:var(--gold-dim);letter-spacing:1px;text-align:left;padding:8px 12px;border-bottom:1px solid var(--border);text-transform:uppercase}
+.astro-table td{padding:9px 12px;border-bottom:1px solid rgba(74,48,24,0.07);vertical-align:top}
+.astro-table tr:last-child td{border-bottom:none}
+.astro-table tr:hover td{background:rgba(123,96,71,0.04)}
+.planet-name{color:var(--gold);font-weight:700}
+.deg-val{color:var(--accent2);font-family:monospace;font-size:12px}
+.house-num{color:var(--muted);font-size:12px}
+.element-bars{display:flex;flex-direction:column;gap:12px}
+.element-row{display:flex;align-items:center;gap:12px}
+.element-label{width:70px;font-size:13px;color:var(--muted)}
+.element-bar-bg{flex:1;height:8px;background:rgba(0,0,0,0.07);border-radius:4px;overflow:hidden}
+.element-bar-fill{height:100%;border-radius:4px}
+.el-fire{background:linear-gradient(90deg,#A05040,#C07050)}
+.el-earth{background:linear-gradient(90deg,#7B6047,#A08060)}
+.el-air{background:linear-gradient(90deg,#6B8B60,#8BAB80)}
+.el-water{background:linear-gradient(90deg,#607090,#80A0B0)}
+.element-pct{width:40px;text-align:right;font-size:13px;color:var(--gold)}
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:1px;background:linear-gradient(to bottom,var(--gold-dim),transparent)}
+.tl-item{position:relative;margin-bottom:18px}
+.tl-dot{position:absolute;left:-23px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--deep)}
+.tl-time{font-size:14px;color:var(--gold-dim);font-family:'Caveat',cursive;margin-bottom:3px}
+.tl-text{font-size:13px;color:var(--text)}
+.moon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.moon-day{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;position:relative;overflow:hidden;box-shadow:0 2px 6px rgba(74,48,24,0.05)}
+.moon-day::before{content:attr(data-phase);position:absolute;right:12px;top:10px;font-size:20px;opacity:.3}
+.moon-date{font-family:'Belleza',sans-serif;font-size:12px;color:var(--gold);margin-bottom:4px;text-transform:uppercase;letter-spacing:1px}
+.moon-sign{font-family:'Caveat',cursive;font-size:14px;color:var(--muted);margin-bottom:8px}
+.moon-bars{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap}
+.moon-bar{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;color:var(--muted);min-width:40px}
+.moon-score{font-size:14px;font-weight:700;padding:2px 8px;border-radius:12px;background:rgba(123,96,71,0.1);color:var(--gold)}
+.moon-score.high{background:rgba(107,139,96,0.15);color:#4A7030}
+.moon-score.mid{background:rgba(96,112,144,0.15);color:#406080}
+.moon-score.low{background:rgba(160,80,64,0.1);color:#A05040}
+.moon-tip{font-size:12px;color:var(--text);line-height:1.5}
+.moon-avoid{font-size:11px;color:var(--red);margin-top:4px}
+.supp-tier{margin-bottom:20px}
+.tier-badge{display:inline-block;padding:3px 12px;border-radius:12px;font-size:11px;font-family:'Belleza',sans-serif;letter-spacing:1px;margin-bottom:10px;text-transform:uppercase}
+.tier1{background:rgba(123,96,71,0.12);color:var(--gold);border:1px solid var(--gold-dim)}
+.tier2{background:rgba(96,112,144,0.1);color:#406080;border:1px solid rgba(96,112,144,0.3)}
+.tier3{background:rgba(107,139,96,0.1);color:#4A7030;border:1px solid rgba(107,139,96,0.3)}
+.supp-item{font-size:13px;color:var(--text);padding:6px 0;border-bottom:1px solid rgba(74,48,24,0.06)}
+.supp-item:last-child{border-bottom:none}
+.supp-name{color:var(--gold-dim);font-weight:700}
+.supp-dose{color:var(--accent2);font-size:12px}
+.supp-why{color:var(--muted);font-size:12px;display:block;margin-top:2px}
+.week-day{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;margin-bottom:12px;box-shadow:0 2px 6px rgba(74,48,24,0.05)}
+.week-day-name{font-family:'Belleza',sans-serif;font-size:14px;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:1px}
+.week-sport-badge{display:inline-block;padding:2px 10px;border-radius:10px;background:rgba(96,112,144,0.12);color:#406080;font-size:11px;font-family:'Belleza',sans-serif}
+.week-detail{font-size:13px;color:var(--text)}
+.week-detail strong{color:var(--gold-dim)}
+.sw-item{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(74,48,24,0.06)}
+.sw-item:last-child{border-bottom:none}
+.sw-icon{font-size:18px;flex-shrink:0;margin-top:2px}
+.sw-content h4{font-size:14px;color:var(--gold);margin-bottom:4px}
+.sw-source{font-size:11px;color:var(--accent2);font-style:italic;margin-bottom:4px}
+.sw-desc{font-size:13px;color:var(--text)}
+.sw-tip{font-size:12px;color:var(--accent3);margin-top:4px}
+.formula-box{background:linear-gradient(135deg,rgba(123,96,71,0.07),rgba(190,176,154,0.05));border:1px solid var(--gold-dim);border-radius:var(--radius);padding:30px 32px;text-align:center;margin-top:40px}
+.formula-box h2{font-family:'Belleza',sans-serif;font-size:18px;color:var(--gold);margin-bottom:20px;text-transform:uppercase;letter-spacing:2px}
+.dos-donts{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:600px){.dos-donts{grid-template-columns:1fr}}
+.do-list li,.dont-list li{font-size:13px;padding:5px 0;list-style:none;display:flex;gap:8px}
+.do-list li::before{content:'✦';color:var(--gold);flex-shrink:0}
+.dont-list li::before{content:'✗';color:var(--red);flex-shrink:0}
+.house-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.house-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;box-shadow:0 1px 4px rgba(74,48,24,0.04)}
+.house-num-big{font-family:'Belleza',sans-serif;font-size:28px;color:rgba(123,96,71,0.18);line-height:1;margin-bottom:6px}
+.house-sign{font-size:14px;color:var(--gold);font-weight:700;margin-bottom:3px}
+.house-planets{font-size:12px;color:var(--accent2);margin-bottom:6px}
+.house-strength{display:inline-block;padding:2px 8px;border-radius:8px;font-size:11px;margin-bottom:8px}
+.hs-sehr-stark{background:rgba(123,96,71,0.15);color:var(--gold)}
+.hs-stark{background:rgba(107,139,96,0.12);color:#4A7030}
+.hs-mittel{background:rgba(96,112,144,0.1);color:#406080}
+.hs-schwach{background:rgba(160,128,96,0.1);color:#806040}
+.hs-leer{background:rgba(0,0,0,0.04);color:var(--muted)}
+.house-meaning{font-size:12px;color:var(--muted);line-height:1.5}
+.pull-quote{border-left:3px solid var(--gold-dim);padding:12px 20px;margin:16px 0;background:rgba(123,96,71,0.05);border-radius:0 8px 8px 0}
+.pull-quote p{font-family:'Caveat',cursive;font-size:16px;color:var(--gold);font-style:italic}
+.tag{display:inline-block;padding:2px 8px;background:rgba(123,96,71,0.08);color:var(--gold-dim);border-radius:6px;font-size:11px;margin:2px}
+.aspect-item{font-size:13px;padding:7px 0;border-bottom:1px solid rgba(74,48,24,0.06);display:flex;gap:10px;align-items:flex-start}
+.aspect-item:last-child{border-bottom:none}
+.aspect-type{min-width:110px;font-weight:700;font-size:12px}
+.aspect-conj{color:var(--gold)}.aspect-trig{color:#4A7030}.aspect-sext{color:#406080}.aspect-squa{color:#A05040}.aspect-oppo{color:#806040}
+.aspect-desc{color:var(--text)}
+details{margin-bottom:8px}
+details summary{cursor:pointer;font-family:'Belleza',sans-serif;font-size:13px;color:var(--gold);padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:8px;list-style:none;display:flex;justify-content:space-between;align-items:center;text-transform:uppercase;letter-spacing:.5px;box-shadow:0 1px 4px rgba(74,48,24,0.04)}
+details summary::after{content:'▸';font-size:12px;color:var(--gold-dim)}
+details[open] summary::after{content:'▾'}
+details[open] summary{border-radius:8px 8px 0 0}
+details .detail-body{padding:16px;background:var(--card2);border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;font-size:13px;color:var(--text);line-height:1.7}
+details .detail-body p{margin-bottom:8px}
+details .detail-body em{color:var(--gold-dim);font-style:normal}
+.disclaimer{margin-top:40px;padding:14px 18px;background:rgba(160,80,64,0.05);border:1px solid rgba(160,80,64,0.2);border-radius:8px;font-size:12px;color:var(--muted)}
+@media(max-width:640px){.hero{padding:40px 10px 30px}.astro-table{font-size:12px}}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<div class="hero">
+  <div class="hero-eyebrow">Superhuman Astrologisches Profil</div>
+  <h1>Fische-Seele<br>mit Steinbock-Struktur</h1>
+  <div class="hero-sub">06. März 1994 · 13:42 Uhr · Lengerich (DE) · Heutiges Datum: 19.03.2026</div>
+  <div class="planet-row">
+    <div class="planet-chip"><div class="planet-symbol">☉</div><div class="planet-label">Sonne</div><div class="planet-deg">15° ♓</div></div>
+    <div class="planet-chip"><div class="planet-symbol">☽</div><div class="planet-label">Mond</div><div class="planet-deg">25° ♑</div></div>
+    <div class="planet-chip"><div class="planet-symbol">AC</div><div class="planet-label">Aszendent</div><div class="planet-deg">2° ♋</div></div>
+    <div class="planet-chip"><div class="planet-symbol">☿</div><div class="planet-label">Merkur</div><div class="planet-deg">2° ♓</div></div>
+    <div class="planet-chip"><div class="planet-symbol">♀</div><div class="planet-label">Venus</div><div class="planet-deg">22° ♈</div></div>
+    <div class="planet-chip"><div class="planet-symbol">♂</div><div class="planet-label">Mars</div><div class="planet-deg">14° ♓</div></div>
+    <div class="planet-chip"><div class="planet-symbol">♃</div><div class="planet-label">Jupiter</div><div class="planet-deg">10° ♏</div></div>
+    <div class="planet-chip"><div class="planet-symbol">♄</div><div class="planet-label">Saturn</div><div class="planet-deg">6° ♓</div></div>
+    <div class="planet-chip"><div class="planet-symbol">♅</div><div class="planet-label">Uranus</div><div class="planet-deg">23° ♑</div></div>
+    <div class="planet-chip"><div class="planet-symbol">♆</div><div class="planet-label">Neptun</div><div class="planet-deg">23° ♑</div></div>
+    <div class="planet-chip"><div class="planet-symbol">♇</div><div class="planet-label">Pluto</div><div class="planet-deg">27° ♐</div></div>
+    <div class="planet-chip"><div class="planet-symbol">☊</div><div class="planet-label">N-Knoten</div><div class="planet-deg">25° ♐</div></div>
+  </div>
+</div>
+
+<div class="nav-tabs">
+  <button class="nav-tab active" onclick="scrollTo('horoskop')">① Horoskop</button>
+  <button class="nav-tab" onclick="scrollTo('erscheinung')">② Physisch</button>
+  <button class="nav-tab" onclick="scrollTo('nervensystem')">③ Nerven</button>
+  <button class="nav-tab" onclick="scrollTo('energie')">④ Energie</button>
+  <button class="nav-tab" onclick="scrollTo('ernaehrung')">⑤ Ernährung</button>
+  <button class="nav-tab" onclick="scrollTo('sport')">⑥ Sport</button>
+  <button class="nav-tab" onclick="scrollTo('darm')">⑦ Darm</button>
+  <button class="nav-tab" onclick="scrollTo('gehirn')">⑧ Gehirn</button>
+  <button class="nav-tab" onclick="scrollTo('staerken')">⑨ Stärken</button>
+  <button class="nav-tab" onclick="scrollTo('beruf')">⑩ Beruf</button>
+  <button class="nav-tab" onclick="scrollTo('beziehungen')">⑪ Bezieh.</button>
+  <button class="nav-tab" onclick="scrollTo('mondkalender')">⑫ Mond</button>
+  <button class="nav-tab" onclick="scrollTo('superhuman')">⑬ Superhuman</button>
+  <button class="nav-tab" onclick="scrollTo('chinesisch')">⑭ China</button>
+  <button class="nav-tab" onclick="scrollTo('zyklen')">⑮ Zyklen</button>
+  <button class="nav-tab" onclick="scrollTo('formel')">✦ Formel</button>
+</div>
+
+<!-- 00 HOROSKOP -->
+<div class="section" id="horoskop">
+  <div class="section-header"><span class="section-number">00</span><h2 class="section-title">Das vollständige Horoskop</h2><span class="section-icon">☉</span></div>
+  <div class="card" style="padding:0;overflow:hidden;">
+    <table class="astro-table">
+      <thead><tr><th>Planet</th><th>Zeichen</th><th>Grad</th><th>Haus</th><th>Qualität</th></tr></thead>
+      <tbody>
+        <tr><td class="planet-name">☉ Sonne</td><td>Fische</td><td class="deg-val">15°14'</td><td class="house-num">H9</td><td><span class="tag">Wandelbar · Wasser</span></td></tr>
+        <tr><td class="planet-name">☽ Mond</td><td>Steinbock</td><td class="deg-val">25°02'</td><td class="house-num">H7</td><td><span class="tag">Kardinal · Erde</span></td></tr>
+        <tr><td class="planet-name">AC Aszendent</td><td>Krebs</td><td class="deg-val">2°18'</td><td class="house-num">H1</td><td><span class="tag">Kardinal · Wasser</span></td></tr>
+        <tr><td class="planet-name">MC Midheaven</td><td>Fische</td><td class="deg-val">3°55'</td><td class="house-num">H10</td><td><span class="tag">Wandelbar · Wasser</span></td></tr>
+        <tr><td class="planet-name">☿ Merkur</td><td>Fische</td><td class="deg-val">2°17' (R)</td><td class="house-num">H9</td><td><span class="tag">Im Exil · intuitiv</span></td></tr>
+        <tr><td class="planet-name">♀ Venus</td><td>Widder</td><td class="deg-val">22°48'</td><td class="house-num">H10</td><td><span class="tag">Kardinal · Feuer</span></td></tr>
+        <tr><td class="planet-name">♂ Mars</td><td>Fische</td><td class="deg-val">14°32'</td><td class="house-num">H9</td><td><span class="tag">Wandelbar · Wasser</span></td></tr>
+        <tr><td class="planet-name">♃ Jupiter</td><td>Skorpion</td><td class="deg-val">10°06'</td><td class="house-num">H5</td><td><span class="tag">Fest · Wasser</span></td></tr>
+        <tr><td class="planet-name">♄ Saturn</td><td>Fische</td><td class="deg-val">6°15'</td><td class="house-num">H9</td><td><span class="tag">Wandelbar · Wasser</span></td></tr>
+        <tr><td class="planet-name">♅ Uranus</td><td>Steinbock</td><td class="deg-val">23°31'</td><td class="house-num">H7</td><td><span class="tag">Kardinal · Erde</span></td></tr>
+        <tr><td class="planet-name">♆ Neptun</td><td>Steinbock</td><td class="deg-val">23°12'</td><td class="house-num">H7</td><td><span class="tag">Kardinal · Erde</span></td></tr>
+        <tr><td class="planet-name">♇ Pluto</td><td>Schütze</td><td class="deg-val">27°20'</td><td class="house-num">H6</td><td><span class="tag">Wandelbar · Feuer</span></td></tr>
+        <tr><td class="planet-name">☊ N. Knoten</td><td>Schütze</td><td class="deg-val">25°14'</td><td class="house-num">H6</td><td><span class="tag">Expansion · Glaube</span></td></tr>
+        <tr><td class="planet-name">☋ S. Knoten</td><td>Zwillinge</td><td class="deg-val">25°14'</td><td class="house-num">H12</td><td><span class="tag">Auflösung</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid-2" style="margin-top:14px;">
+    <div class="card">
+      <div class="card-title">Elementverteilung</div>
+      <div class="element-bars">
+        <div class="element-row"><span class="element-label">Wasser</span><div class="element-bar-bg"><div class="element-bar-fill el-water" style="width:52%"></div></div><span class="element-pct">52%</span></div>
+        <div class="element-row"><span class="element-label">Erde</span><div class="element-bar-bg"><div class="element-bar-fill el-earth" style="width:28%"></div></div><span class="element-pct">28%</span></div>
+        <div class="element-row"><span class="element-label">Feuer</span><div class="element-bar-bg"><div class="element-bar-fill el-fire" style="width:12%"></div></div><span class="element-pct">12%</span></div>
+        <div class="element-row"><span class="element-label">Luft</span><div class="element-bar-bg"><div class="element-bar-fill el-air" style="width:8%"></div></div><span class="element-pct">8%</span></div>
+      </div>
+      <p style="margin-top:12px;font-size:12px;color:var(--muted);">Dominanz: <em>Wasser (Fühlen, Intuition, Empathie)</em> + Erde-Anker. Extremes Fehlen von Luft — Tendenz zu Gedankenspiralen.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Qualitäten</div>
+      <div class="element-bars">
+        <div class="element-row"><span class="element-label">Wandelbar</span><div class="element-bar-bg"><div class="element-bar-fill" style="width:55%;background:linear-gradient(90deg,#7B6047,#A08060)"></div></div><span class="element-pct">55%</span></div>
+        <div class="element-row"><span class="element-label">Kardinal</span><div class="element-bar-bg"><div class="element-bar-fill" style="width:35%;background:linear-gradient(90deg,#3D6B8F,#5DB4C8)"></div></div><span class="element-pct">35%</span></div>
+        <div class="element-row"><span class="element-label">Fest</span><div class="element-bar-bg"><div class="element-bar-fill" style="width:10%;background:linear-gradient(90deg,#7B6B3E,#A08C52)"></div></div><span class="element-pct">10%</span></div>
+      </div>
+      <p style="margin-top:12px;font-size:12px;color:var(--muted);">Dominanz: <em>Wandelbar</em> — Anpassungsfähigkeit, Fließen. Mangel: Feste Qualität — Ausdauer braucht aktive Übung.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px;">
+    <div class="card-title">Wichtigste Aspekte (orb ≤ 8°)</div>
+    <div class="aspect-item"><span class="aspect-type aspect-conj">☌ Konjunktion</span><span class="aspect-desc">☉ Sonne &amp; ♂ Mars (1°42') — H9: Missionsantrieb, Kraft und Wille verbunden mit Sinn.</span></div>
+    <div class="aspect-item"><span class="aspect-type aspect-conj">☌ Konjunktion</span><span class="aspect-desc">☉ Sonne &amp; ♄ Saturn (9°) — Pflichtbewusstsein und Disziplin; muss mit Leichtigkeit ausbalanciert werden.</span></div>
+    <div class="aspect-item"><span class="aspect-type aspect-conj">☌ Konjunktion</span><span class="aspect-desc">☽ Mond &amp; ♅ Uranus &amp; ♆ Neptun (2°) — H7: Emotionale Intensität + Sehnsucht nach Transformation in Beziehungen.</span></div>
+    <div class="aspect-item"><span class="aspect-type aspect-conj">☌ Konjunktion</span><span class="aspect-desc">♅ Uranus &amp; ♆ Neptun (0°19') — Generationsaspekt: Spirituelle Revolution, Auflösung alter Strukturen.</span></div>
+    <div class="aspect-item"><span class="aspect-type aspect-trig">△ Trigon</span><span class="aspect-desc">☉ Sonne &amp; ♃ Jupiter (5°08') — Fische/Skorpion Wasser-Trigon: tiefe Weisheit, Glück durch spirituelle Tiefe.</span></div>
+    <div class="aspect-item"><span class="aspect-type aspect-trig">△ Trigon</span><span class="aspect-desc">♄ Saturn &amp; ♇ Pluto (8°55') — Strukturelle Transformation durch Ausdauer.</span></div>
+    <div class="aspect-item"><span class="aspect-type aspect-squa">□ Quadrat</span><span class="aspect-desc">♀ Venus &amp; ♇ Pluto (4°28') — H10/6: Kontrolle vs. Hingabe als Lebensthema.</span></div>
+    <div class="aspect-item"><span class="aspect-type aspect-squa">□ Quadrat</span><span class="aspect-desc">☽ Mond &amp; ♇ Pluto (2°18') — Emotionale Tiefenstruktur; Fähigkeit zur Seelenheilung.</span></div>
+    <div class="aspect-item"><span class="aspect-type aspect-oppo">☍ Opposition</span><span class="aspect-desc">♂ Mars &amp; ☽ Mond — Fische/Steinbock: Spannung zwischen Fühlen und Handeln; kreative Reibung.</span></div>
+    <div class="aspect-item"><span class="aspect-type aspect-sext">⚹ Sextil</span><span class="aspect-desc">☊ N.Knoten &amp; ♄ Saturn — Verantwortung und Disziplin sind der Weg zum Wachstum.</span></div>
+  </div>
+
+  <div style="margin-top:20px;">
+    <div class="card-title" style="margin-bottom:12px;font-family:'Belleza',sans-serif;color:var(--gold);font-size:13px;letter-spacing:1px;">DIE 12 HÄUSER</div>
+    <div class="house-grid">
+      <div class="house-card"><div class="house-num-big">I</div><div class="house-sign">Krebs AC 2°</div><div class="house-planets">Leer</div><span class="house-strength hs-stark">Stark</span><p class="house-meaning">Schützend, empfindlich, intuitiv. Erste Wirkung auf andere ist Wärme und Tiefe.</p></div>
+      <div class="house-card"><div class="house-num-big">II</div><div class="house-sign">Löwe 2°</div><div class="house-planets">Leer</div><span class="house-strength hs-mittel">Mittel</span><p class="house-meaning">Werte und Ressourcen; Geldthema mit Großzügigkeit. Lernt Wert auf eigene Talente zu setzen.</p></div>
+      <div class="house-card"><div class="house-num-big">III</div><div class="house-sign">Jungfrau 2°</div><div class="house-planets">Leer</div><span class="house-strength hs-schwach">Schwach</span><p class="house-meaning">Kommunikation, Alltag, Geschwister. Analytisch im direkten Ausdruck.</p></div>
+      <div class="house-card"><div class="house-num-big">IV</div><div class="house-sign">Waage 2°</div><div class="house-planets">Leer</div><span class="house-strength hs-schwach">Schwach</span><p class="house-meaning">Heimat, Wurzeln, Familie. Balance zwischen Harmonie und Eigenem.</p></div>
+      <div class="house-card"><div class="house-num-big">V</div><div class="house-sign">Skorpion 2°</div><div class="house-planets">♃ Jupiter 10°</div><span class="house-strength hs-stark">Stark</span><p class="house-meaning">Kreativität, Liebe: Jupiter in Skorpion H5 gibt intensive, transformative kreative Energie.</p></div>
+      <div class="house-card"><div class="house-num-big">VI</div><div class="house-sign">Schütze 2°</div><div class="house-planets">♇ Pluto 27° · ☊ N.Kn. 25°</div><span class="house-strength hs-sehr-stark">Sehr stark</span><p class="house-meaning">Arbeit, Gesundheit: Nordknoten hier = Lebensaufgabe durch Dienst und tägliches Handwerk.</p></div>
+      <div class="house-card"><div class="house-num-big">VII</div><div class="house-sign">Steinbock 2°</div><div class="house-planets">☽ 25° · ♅ 23° · ♆ 23°</div><span class="house-strength hs-sehr-stark">Sehr stark</span><p class="house-meaning">Beziehungen: 3 Planeten! Tiefe, transformative Partnerschaften. Spirituell intensive Partner gesucht.</p></div>
+      <div class="house-card"><div class="house-num-big">VIII</div><div class="house-sign">Wassermann 2°</div><div class="house-planets">Leer</div><span class="house-strength hs-schwach">Schwach</span><p class="house-meaning">Wandel, Intimität, Ressourcen anderer. Nicht der Hauptfokus.</p></div>
+      <div class="house-card"><div class="house-num-big">IX</div><div class="house-sign">Fische 3°</div><div class="house-planets">☉ 15° · ♂ 14° · ♄ 6° · ☿ 2°</div><span class="house-strength hs-sehr-stark">Sehr stark — Kernhaus</span><p class="house-meaning">Philosophie, Reisen, Weisheit: 4 Planeten! Das dominierende Haus. Identität = Sucher nach Wahrheit.</p></div>
+      <div class="house-card"><div class="house-num-big">X</div><div class="house-sign">Fische MC 3°55'</div><div class="house-planets">♀ Venus 22°</div><span class="house-strength hs-stark">Stark</span><p class="house-meaning">Karriere: Venus im Widder auf MC Fische — charismatischer, kreativer Beruf.</p></div>
+      <div class="house-card"><div class="house-num-big">XI</div><div class="house-sign">Widder 3°</div><div class="house-planets">Leer</div><span class="house-strength hs-mittel">Mittel</span><p class="house-meaning">Freundeskreis, Visionen: Pioniergeist in der Gruppe.</p></div>
+      <div class="house-card"><div class="house-num-big">XII</div><div class="house-sign">Stier 3°</div><div class="house-planets">☋ S.Knoten 25°</div><span class="house-strength hs-mittel">Mittel</span><p class="house-meaning">Unterbewusstes: Südknoten = frühere Muster von materiellem Komfort, die losgelassen werden sollen.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- 01 PHYSISCH -->
+<div class="section" id="erscheinung">
+  <div class="section-header"><span class="section-number">01</span><h2 class="section-title">Physisches Erscheinungsbild &amp; Körperbau</h2><span class="section-icon">⬡</span></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Körperbau &amp; Erscheinung</div>
+      <p><em>Krebs-Aszendent (2°)</em> gibt einen mittleren Körperbau (ca. 172–180 cm), breiter Brustkorb, runde weiche Gesichtszüge, große empfänglich wirkende Augen.</p>
+      <p><em>Sonne &amp; Mars in Fische H9</em> prägen eine fließende, leicht entrückte Bewegungsweise — fast schwebend.</p>
+      <p><em>Mond in Steinbock</em> bringt Festigkeit darunter: Knochen sind solide, der Körper hält mehr aus als er aussieht.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Erste Wirkung &amp; sensible Zonen</div>
+      <p>Fremde empfinden diese Person sofort als <em>warm, zugänglich, tiefgründig</em>. Magnetische Anziehungskraft die Vertrauen einflößt.</p>
+      <p>Sensible Körperbereiche: <em>Brust/Magen</em> (Krebs-AC), <em>Füße</em> (Fische-Sonne), <em>Knie und Skelett</em> (Steinbock-Mond).</p>
+      <p>Optimaler Körper: <em>beweglich, sehnig, funktional</em>. Saturn in Fische mahnt: Faszien, Bänder, Füße brauchen besondere Pflege.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 02 NERVENSYSTEM -->
+<div class="section" id="nervensystem">
+  <div class="section-header"><span class="section-number">02</span><h2 class="section-title">Das Nervensystem — Tiefste Analyse</h2><span class="section-icon">⚡</span></div>
+  <div class="pull-quote"><p>Dieser Mensch ist kein normaler Nervensystemtyp. Er ist ein hochsensibles, fließendes System mit Erdanker — und darin liegt seine größte Stärke und seine größte Gefahr.</p></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Nervensystemtyp &amp; Neurotransmitter</div>
+      <p><em>Hochsensibel-elektrisch</em>: 4 Planeten in Fische H9 + Krebs-AC + Mond/Uranus/Neptun-Konjunktion H7. Nimmt alles auf: Stimmungen, unausgesprochene Spannungen, emotionale Resonanzen.</p>
+      <p><em>Serotonin</em>: abhängt stark von Sinnerleben. <em>Dopamin</em>: hochreaktiv — intensive Erlebnisse wirken massiv. <em>GABA</em>: tendenziell niedrig bei Überstimulation. <em>Acetylcholin</em>: sehr hoch — lebhafte Träume, fotografisches Empfindungsgedächtnis.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Tägliche Entladungsrituale (zwingend)</div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Morgen</div><div class="tl-text">10 Min Wim-Hof-Atmung + 2 Min Kaltdusche (Vagusnerv-Aktivierung)</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Mittag</div><div class="tl-text">5 Min Physiological Sigh (2× einatmen, langsam ausatmen)</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Abend</div><div class="tl-text">20–30 Min alleine in Stille — absolute Pflicht. Kein Input, kein Handy.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Wöchentlich</div><div class="tl-text">Sauna oder Floatation Tank: Senso-Deprivation ist Hochleistungs-Recovery.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Top-Energieräuber</div>
+    <p>1. <em>Großraumbüros und Lärm</em> · 2. <em>Energetisch schwierige Menschen</em> (empfängt deren Emotionen wie ein Schwamm) · 3. <em>Zu viel Bildschirmzeit abends</em> · 4. <em>Ungelöste zwischenmenschliche Konflikte</em> · 5. <em>Alkohol</em> (Fische + Neptun = erhöhtes Suchtpotenzial) · 6. <em>Zucker</em> (destabilisiert das reaktive System).</p>
+  </div>
+</div>
+
+<!-- 03 ENERGIE -->
+<div class="section" id="energie">
+  <div class="section-header"><span class="section-number">03</span><h2 class="section-title">Energie — Das vollständige Tagesprotokoll</h2><span class="section-icon">⏱</span></div>
+  <details open>
+    <summary>☀️ MORGENPROTOKOLL</summary>
+    <div class="detail-body">
+      <p><em>Optimale Aufwachzeit: 06:30–07:00 Uhr.</em> Kein Wecker-Schock — Lichtwecker oder Naturgeräusche.</p>
+      <p><em>Erste 5 Minuten:</em> 5 tiefe Bauchatmungen. Tagesintention setzen. Kein Griff zum Handy — das System braucht 20 Min Puffer.</p>
+      <p><em>Wasser-Protokoll:</em> 500 ml Wasser auf Zimmertemperatur + eine Prise Meersalz + Saft einer halben Zitrone.</p>
+      <p><em>Atemübung (7–12 Min):</em> Wim-Hof: 30 tiefe Atemzüge, Atem anhalten 1–2 Min, 15 Sek. Einatmen halten. 3 Runden. Dann 4-7-8-Atmung × 4.</p>
+      <p><em>Bewegung (15–25 Min):</em> KEIN High-Intensity. Yoga Sun Salutations × 5 oder Tai-Chi oder Schwimmen.</p>
+      <p><em>Journaling (10 Min):</em> "Was möchte ich heute erreichen?" · "Was fühle ich gerade wirklich?" · "Wofür bin ich dankbar?"</p>
+      <p><em>Erstes Essen:</em> Nicht vor 09:00–10:00 Uhr. 16:8-Fasten-Fenster ideal.</p>
+    </div>
+  </details>
+  <details>
+    <summary>🌙 ABENDPROTOKOLL</summary>
+    <div class="detail-body">
+      <p><em>Digitaler Sonnenuntergang: 21:00 Uhr</em> — Alle Bildschirme aus oder Blaulichtfilter auf Maximum.</p>
+      <p><em>Wärme-/Wasserritual:</em> 20:30–21:00 Warmes Bad (38–40°C, 15 Min). Magnesiumflocken ins Badewasser.</p>
+      <p><em>Schlaf-Setup:</em> Zimmertemperatur 17–19°C, völlige Dunkelheit, kein WLAN-Router im Schlafzimmer.</p>
+      <p><em>Optimale Schlafenszeit: 22:00–22:30 Uhr. Schlafdauer: 8–9 Stunden</em> — dieser Typ braucht überdurchschnittlich viel Tiefschlaf.</p>
+    </div>
+  </details>
+</div>
+
+<!-- 04 KOMMUNIKATION -->
+<div class="section" id="kommunikation">
+  <div class="section-header"><span class="section-number">04</span><h2 class="section-title">Ausdruck &amp; Kommunikation</h2><span class="section-icon">☿</span></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Natürlicher Kommunikationsstil</div>
+      <p><em>Merkur in Fische H9 (im Exil, retrograd):</em> Nicht-lineares, bilderreiches Denken. Kommuniziert durch Metaphern und Geschichten. Stärkste Ausdrucksform: 1:1 Gespräche, geschriebenes Wort, Musik oder Kunst.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Überzeugung &amp; Konflikt</div>
+      <p><em>Am überzeugendsten</em> wenn er über etwas spricht das er tief fühlt. <em>Konflikte lösen</em> durch Zeit, dann offenes emotionales Gespräch. Schriftlich stärker als verbal in Konflikten.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 05 ERNÄHRUNG -->
+<div class="section" id="ernaehrung">
+  <div class="section-header"><span class="section-number">05</span><h2 class="section-title">Ernährung — Absolut vollständig</h2><span class="section-icon">🌿</span></div>
+  <div class="card">
+    <div class="card-title">Grundprinzipien</div>
+    <p><em>Fasten-Fenster: 16:8</em> — Essen zwischen 10:00 und 18:00 Uhr. <em>Makros:</em> Protein 30% · Gesunde Fette 35% · Komplexe Kohlenhydrate 35%.</p>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Lebensmittel die STÄRKEN</div>
+      <p><strong style="color:var(--gold-light)">Nervensystem:</strong> Lachs &amp; Sardinen · Walnüsse · Blaubeeren · Spinat (Magnesium) · Dunkle Schokolade 85%+ · Eier · Avocado · Kürbiskerne · Kamillentee · Ashwagandha</p>
+      <p style="margin-top:8px"><strong style="color:var(--gold-light)">Darm:</strong> Kefir · Kimchi · Sauerkraut · Leinsamen · Artischocken · Ingwer · Fenchel · Knochenbrühe</p>
+      <p style="margin-top:8px"><strong style="color:var(--gold-light)">Gehirn:</strong> Wildlachs · Heidelbeeren · Kurkuma + Pfeffer · Grüner Tee + L-Theanin · Eier · Brokkoli</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Absolut VERMEIDEN</div>
+      <p><em>Alkohol</em> (Neptun/Fische = höchstes astrologisches Suchtrisiko) · Energydrinks · Zucker-Crashs · MSG · Gluten (erhöhte Darmdurchlässigkeit) · industrielle Pflanzenöle</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:0;">
+    <div class="card-title">Supplements</div>
+    <div class="supp-tier">
+      <span class="tier-badge tier1">TIER 1 — Absolut essentiell</span>
+      <div class="supp-item"><span class="supp-name">Magnesium Glycinat/Threonate</span> <span class="supp-dose">400–600mg täglich, abends</span><span class="supp-why">Fische-Typen: systematisch niedrige Magnesiumwerte. GABA, Schlaftiefe, Muskelregeneration.</span></div>
+      <div class="supp-item"><span class="supp-name">Omega-3 (EPA/DHA)</span> <span class="supp-dose">2–3g täglich</span><span class="supp-why">Myelin-Schutz für hochsensibles Nervensystem. Anti-inflammatorisch.</span></div>
+      <div class="supp-item"><span class="supp-name">Vitamin D3 + K2</span> <span class="supp-dose">4000–5000 IU D3 + 100–200mcg K2 MK7</span><span class="supp-why">Norddeutschland = chronischer D3-Mangel. Immun, Hormon, Schlaf, Stimmung.</span></div>
+      <div class="supp-item"><span class="supp-name">Ashwagandha KSM-66</span> <span class="supp-dose">300–600mg</span><span class="supp-why">Cortisol-Regulation für überreiztes NS. Reduziert Angst ohne Sedierung.</span></div>
+    </div>
+    <div class="supp-tier">
+      <span class="tier-badge tier2">TIER 2 — Sehr wichtig</span>
+      <div class="supp-item"><span class="supp-name">Zink Bisglicinat</span> <span class="supp-dose">25–30mg täglich, abends</span><span class="supp-why">Testosteron-Ko-Faktor, Immunsystem, Hautgesundheit.</span></div>
+      <div class="supp-item"><span class="supp-name">L-Theanin</span> <span class="supp-dose">200mg</span><span class="supp-why">Entspannte Wachheit. Alpha-Wellenmuster ohne Sedierung.</span></div>
+      <div class="supp-item"><span class="supp-name">Probiotika (multi-strain)</span> <span class="supp-dose">min. 10 Mrd. CFU morgens</span><span class="supp-why">Darm-Hirn-Achse. Lactobacillus rhamnosus senkt nachweislich Angst.</span></div>
+      <div class="supp-item"><span class="supp-name">Vitamin B-Komplex (aktive Formen)</span> <span class="supp-dose">Morgens mit Essen</span><span class="supp-why">B12 (Methylcobalamin), B6 (P5P), Folat — Neurotransmitter-Synthese.</span></div>
+    </div>
+    <div class="supp-tier">
+      <span class="tier-badge tier3">TIER 3 — Optimierung</span>
+      <div class="supp-item"><span class="supp-name">Kreatin Monohydrat</span> <span class="supp-dose">5g täglich</span><span class="supp-why">Gehirnenergie + Muskelkraft.</span></div>
+      <div class="supp-item"><span class="supp-name">NAC (N-Acetylcystein)</span> <span class="supp-dose">600mg täglich</span><span class="supp-why">Glutathion-Vorstufe, Entgiftung (Leber — Fische-Zone).</span></div>
+      <div class="supp-item"><span class="supp-name">Löwenmähne (Lion's Mane)</span> <span class="supp-dose">500–1000mg täglich</span><span class="supp-why">NGF-Produktion, Neuroplastizität, Kreativität.</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 06 SPORT -->
+<div class="section" id="sport">
+  <div class="section-header"><span class="section-number">06</span><h2 class="section-title">Sport &amp; Bewegung — Wochenplan</h2><span class="section-icon">♂</span></div>
+  <div class="card">
+    <div class="card-title">Sport-Philosophie</div>
+    <p><em>Mars in Fische:</em> kämpft nicht, er fließt. <em>Schwimmen ist der Königssport.</em> Optimal: Schwimmen, Kampfkünste (Aikido, Tai Chi, Jiu-Jitsu), Yoga, Klettern, Natur-Laufen, Tanzen. Kontraproduktiv: Crossfit-Exzesse, reines Isolationsgewicht-Training.</p>
+  </div>
+  <div class="week-day"><div class="week-day-name">MONTAG <span class="week-sport-badge">Schwimmen 60 Min</span></div><div class="week-detail"><strong>Fische-Heimkommen:</strong> 1500–2000m (Kraulen + Rücken). Moderate Intensität. Danach: 10 Min Dehnen Hüfte + Schultern.</div></div>
+  <div class="week-day"><div class="week-day-name">DIENSTAG <span class="week-sport-badge">Kraft-Flow 45 Min</span></div><div class="week-detail"><strong>Funktionelles Training:</strong> Kettlebell, Bodyweight, TRX. Turkish Get-Up × 5, Goblet Squat × 12, Push-Up-Variationen, Hanging Knee Raises. Ziel: Körperkontrolle, nicht Masse.</div></div>
+  <div class="week-day"><div class="week-day-name">MITTWOCH <span class="week-sport-badge">Yoga/Beweglichkeit 60 Min</span></div><div class="week-detail"><strong>Aktive Regeneration:</strong> Yin Yoga oder Vinyasa. Fokus: Hüfte, Hüftbeuger, Schultern, Fußgelenke (Fische-Schwachstellen). Pranayama 10 Min am Ende.</div></div>
+  <div class="week-day"><div class="week-day-name">DONNERSTAG <span class="week-sport-badge">Laufen/Ausdauer 50 Min</span></div><div class="week-detail"><strong>Natur-Lauf:</strong> Keine Laufbahn — Wald, Park, Fluss. Zone 2 (130–145 bpm). Barfuß-Abschnitte wenn möglich (Erdung, Faszien).</div></div>
+  <div class="week-day"><div class="week-day-name">FREITAG <span class="week-sport-badge">Kampfkunst/Tanzen 60–75 Min</span></div><div class="week-detail"><strong>Ausdruck und Kraft:</strong> Aikido, Jiu-Jitsu, Boxen (technisch) ODER Tanzen (Salsa, Tango, Contemporary). Danach: Sauna 20 Min wenn verfügbar.</div></div>
+  <div class="week-day"><div class="week-day-name">SAMSTAG <span class="week-sport-badge">Lange Einheit 90 Min</span></div><div class="week-detail"><strong>Wochenend-Tiefe:</strong> Schwimmen 2000m + Sauna + Kalt-Warm-Wechsel. ODER: Klettern. ODER: 2h Wandern in der Natur.</div></div>
+  <div class="week-day"><div class="week-day-name">SONNTAG <span class="week-sport-badge">Völlige Erholung</span></div><div class="week-detail"><strong>NS-Reset:</strong> Kein strukturierter Sport. Spaziergang 30–45 Min. Dehnen oder Yin-Yoga 20 Min zu Hause.</div></div>
+</div>
+
+<!-- 07 DARM -->
+<div class="section" id="darm">
+  <div class="section-header"><span class="section-number">07</span><h2 class="section-title">Darmgesundheit — Das Fundament</h2><span class="section-icon">🌿</span></div>
+  <div class="card">
+    <div class="card-title">Warum der Darm Priorität 1 ist</div>
+    <p><em>Krebs-Aszendent</em> regiert den Magen — Emotionen werden DIREKT im Bauch gespürt. <em>Darm-Hirn-Achse:</em> 90% des Serotonins wird im Darm produziert. Bei einem Fische-Typ bedeutet schlechte Darmgesundheit = chronisch gedrückte Stimmung.</p>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Tägliche Darmrituale</div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Morgens nüchtern</div><div class="tl-text">500ml warmes Wasser + Zitrone. Probiotikum nehmen. 30 Min warten vor erstem Essen.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Mittags</div><div class="tl-text">2 EL Sauerkraut oder Kimchi. Langsam kauen (30× pro Bissen). Kein Wasser während des Essens.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Abends</div><div class="tl-text">Fencheltee oder Ingwer-Zitrone-Tee + Magnesiumsupplementation.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Wöchentlich</div><div class="tl-text">1× wöchentlich 24h Fasten für Darmerholung und Autophagie-Aktivierung.</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Warnsignale</div>
+      <p>Aufgedunsenheit nach Essen · Stimmungsabfall ohne Grund · Hautröotungen · Häufiges Erkälten · Hirn-Nebel trotz ausreichend Schlaf.</p>
+      <p><em>Sofortmaßnahmen:</em> 3-Tage-Reset: Knochenbrühe + gedünstetes Gemüse + probiotische Lebensmittel. Kein Zucker, kein Alkohol, kein Gluten.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 08 GEHIRN -->
+<div class="section" id="gehirn">
+  <div class="section-header"><span class="section-number">08</span><h2 class="section-title">Gehirn-Optimierung</h2><span class="section-icon">✦</span></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Kognitiver Stil</div>
+      <p><em>Merkur in Fische (retrograd, H9):</em> Holistisch-intuitives Denken. Versteht das Gesamtbild bevor Details. Lernt durch Erleben. Stärke: Systemdenken, sieht Muster die andere übersehen.</p>
+      <p><em>Ideale Lernumgebung:</em> Allein oder max. 2 Personen · ruhige Atmosphäre · Binaural Beats 8–12Hz · Morgen oder früher Nachmittag · Handgeschriebene Notizen.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Neuroplastizität-Protokoll</div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Täglich</div><div class="tl-text">10 Min NSDR oder Yoga Nidra. Handschriftliches Journaling. 20 Min neue Fähigkeit üben.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Wöchentlich</div><div class="tl-text">Spaced Repetition Learning (Anki). Cold Exposure 3×.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Kreativität</div><div class="tl-text">Peak-Zeiten: Morgendämmerung 05:30–07:00 und 22:00–24:00. Immer Notizbuch bereithalten.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 09 STÄRKEN -->
+<div class="section" id="staerken">
+  <div class="section-header"><span class="section-number">09</span><h2 class="section-title">Stärken, Schwächen &amp; Schattenseiten</h2><span class="section-icon">⬠</span></div>
+
+  <div class="card-title" style="margin-bottom:14px;font-family:'Belleza',sans-serif;color:var(--gold);font-size:13px;letter-spacing:1px;">STÄRKEN</div>
+  <div class="card" style="padding:10px 20px;">
+    <div class="sw-item"><div class="sw-icon">✦</div><div class="sw-content"><h4>Tiefe Empathie &amp; emotionale Intelligenz</h4><div class="sw-source">☉+♂ Fische H9 + Krebs-AC</div><p class="sw-desc">Spürt was andere fühlen bevor sie es sagen. In Führung, Therapie, Kunst unschlagbar.</p></div></div>
+    <div class="sw-item"><div class="sw-icon">✦</div><div class="sw-content"><h4>Visionäres Denken &amp; Intuition</h4><div class="sw-source">Merkur Fische (Exil) + ♆ Neptun H7</div><p class="sw-desc">Sieht Muster und Zusammenhänge, die andere übersehen. Träumt Lösungen bevor der Verstand sie versteht.</p></div></div>
+    <div class="sw-item"><div class="sw-icon">✦</div><div class="sw-content"><h4>Missionsgetriebene Energie</h4><div class="sw-source">☉ Konjunktion ♂ Mars H9</div><p class="sw-desc">Wenn der SINN gefunden ist, ist die Energie unerschöpflich und ansteckend.</p></div></div>
+    <div class="sw-item"><div class="sw-icon">✦</div><div class="sw-content"><h4>Transformationskraft</h4><div class="sw-source">♃ Jupiter H5 Skorpion + ♇ Pluto H6</div><p class="sw-desc">Versteht Tiefenveränderungen. Kann andere durch ihre dunkelsten Phasen führen. Phönix-Energie.</p></div></div>
+    <div class="sw-item"><div class="sw-icon">✦</div><div class="sw-content"><h4>Strukturiertes Fühlen</h4><div class="sw-source">☽ Steinbock H7</div><p class="sw-desc">Seltene Kombination: Mond in Steinbock verhindert das "Davonschwimmen". Gefühle werden letztendlich geordnet.</p></div></div>
+    <div class="sw-item"><div class="sw-icon">✦</div><div class="sw-content"><h4>Tiefe Kreativität</h4><div class="sw-source">♃ Jupiter Skorpion H5</div><p class="sw-desc">Intensive, transformative künstlerische Kraft. Was dieser Mensch erschafft, berührt Menschen.</p></div></div>
+    <div class="sw-item"><div class="sw-icon">✦</div><div class="sw-content"><h4>Philosophisch-spirituelle Tiefe</h4><div class="sw-source">H9 als Haupthaus + MC Fische</div><p class="sw-desc">Kann Komplexität und Widersprüche halten. Weisheit, nicht nur Wissen.</p></div></div>
+    <div class="sw-item"><div class="sw-icon">✦</div><div class="sw-content"><h4>Magnetisches Charisma</h4><div class="sw-source">♀ Venus Widder auf MC</div><p class="sw-desc">Direktes, authentisches Charisma. Zieht Menschen und Chancen an wenn er sichtbar ist.</p></div></div>
+    <div class="sw-item"><div class="sw-icon">✦</div><div class="sw-content"><h4>Heilende Präsenz</h4><div class="sw-source">Krebs-AC + Fische-Stellium + ☊ Nordknoten H6</div><p class="sw-desc">Menschen fühlen sich in seiner Gegenwart besser. Heilerqualitäten — energetisch real.</p></div></div>
+    <div class="sw-item"><div class="sw-icon">✦</div><div class="sw-content"><h4>Loyalität und Tiefenbindung</h4><div class="sw-source">♃ Jupiter Skorpion + Krebs-AC</div><p class="sw-desc">Einmal vertraut, vollständig verbunden. Niemals oberflächliche Beziehungen angestrebt.</p></div></div>
+  </div>
+
+  <div class="card-title" style="margin:20px 0 14px;font-family:'Belleza',sans-serif;color:var(--red);font-size:13px;letter-spacing:1px;">SCHWÄCHEN &amp; HERAUSFORDERUNGEN</div>
+  <div class="card" style="padding:10px 20px;">
+    <div class="sw-item"><div class="sw-icon" style="color:var(--red)">✗</div><div class="sw-content"><h4>Grenzenlosigkeit — kann nicht Nein sagen</h4><div class="sw-source">Fische-Stellium, Krebs-AC</div><p class="sw-desc">Übernimmt emotional die Lasten anderer. Erschöpft sich in fürsorglichen Rollen.</p><p class="sw-tip">Lösung: "Nein" als vollständiger Satz. Saturn in Fische aktivieren: Struktur IST Fürsorge.</p></div></div>
+    <div class="sw-item"><div class="sw-icon" style="color:var(--red)">✗</div><div class="sw-content"><h4>Entscheidungslähmung</h4><div class="sw-source">Merkur Fische + wandelbare Dominanz</div><p class="sw-desc">Sieht alle Perspektiven gleichzeitig. Entscheiden = eine Welt wählen = Schmerz.</p><p class="sw-tip">Lösung: Zeitlimit für Entscheidungen. Körperkompas nutzen.</p></div></div>
+    <div class="sw-item"><div class="sw-icon" style="color:var(--red)">✗</div><div class="sw-content"><h4>Eskapismus</h4><div class="sw-source">Fische + Neptun Dominanz + H12 Südknoten</div><p class="sw-desc">Flüchtet in Fantasie, Sucht, Überarbeitung wenn Realität schmerzt.</p><p class="sw-tip">Lösung: Wann tauche ich ab? Als Frühwarnsystem etablieren.</p></div></div>
+    <div class="sw-item"><div class="sw-icon" style="color:var(--red)">✗</div><div class="sw-content"><h4>Konfliktvermeidung</h4><div class="sw-source">Mars in Fische (im Exil)</div><p class="sw-desc">Geht Konflikten aus dem Weg bis der Ausbruch überproportional ist.</p><p class="sw-tip">Lösung: Meinung aussprechen, bevor Druck aufgebaut wird.</p></div></div>
+    <div class="sw-item"><div class="sw-icon" style="color:var(--red)">✗</div><div class="sw-content"><h4>Identitätsdiffusion</h4><div class="sw-source">Fische-Sonne + Krebs-AC</div><p class="sw-desc">Kann sich in starken Persönlichkeiten verlieren. Weiß manchmal nicht wo er endet und andere beginnen.</p><p class="sw-tip">Lösung: "Wer bin ich unabhängig von meinen Beziehungen?" als tägliche Journalfrage.</p></div></div>
+    <div class="sw-item"><div class="sw-icon" style="color:var(--red)">✗</div><div class="sw-content"><h4>Chronischer Sinn-Hunger</h4><div class="sw-source">H9 als Haupthaus (Sinn, Philosophie, Wahrheit)</div><p class="sw-desc">Kann nicht in bedeutungsleeren Jobs überleben. Sucht ständig nach tiefem Sinn.</p><p class="sw-tip">Lösung: Sinn als Basis-Bedürfnis akzeptieren und bewusst gestalten statt zu suchen.</p></div></div>
+  </div>
+
+  <div class="card" style="margin-top:14px;border-color:rgba(160,80,64,0.25);">
+    <div class="card-title" style="color:var(--red)">Schattenseiten</div>
+    <p><em>Eskapismus-Spirale:</em> Substanzen, Fantasie-Welten, Workaholic als Vermeidung. Neptun macht die Grenze zwischen "Erholung" und "Selbstbetrug" fließend.</p>
+    <p><em>Martyrer-Muster:</em> Krebs-AC + Fische = Kombination die zur Selbstaufopferung neigt und heimlich erwartet gesehen zu werden.</p>
+    <p><em>Erkennungszeichen:</em> Zunehmendes Gefühl "niemand versteht mich" · mehr als 2h täglich Eskapismus · Substanzen zur Regulation · viele Projekte begonnen, keines abgeschlossen.</p>
+  </div>
+</div>
+
+<!-- 10 BERUF -->
+<div class="section" id="beruf">
+  <div class="section-header"><span class="section-number">10</span><h2 class="section-title">Beste Berufe &amp; Lebensaufgabe</h2><span class="section-icon">♀</span></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Top 10 Berufe</div>
+      <p>1. <em>Psychotherapeut / Coach</em><br>2. <em>Spiritueller Lehrer / Facilitator</em><br>3. <em>Filmer / Regisseur / Drehbuchautor</em><br>4. <em>Musiker / Komponist</em><br>5. <em>Arzt / Heilpraktiker (ganzheitlich)</em><br>6. <em>Forscher / Wissenschaftler</em><br>7. <em>Autor / Schriftsteller</em><br>8. <em>Fotograf / Bildkünstler</em><br>9. <em>Unternehmensberater (Transformation)</em><br>10. <em>Sozialunternehmer / NGO-Führung</em></p>
+    </div>
+    <div class="card">
+      <div class="card-title">Lebensaufgabe — Nordknoten-Analyse</div>
+      <p><em>Nordknoten Schütze in H6:</em> Integration von Philosophie und täglichem Dienst. Weisheit nicht im Elfenbeinturm — sondern in konkreten täglichen Handlungen ausdrücken.</p>
+      <p><em>Jetzt (32 Jahre):</em> Phase der "ersten Ernte". Jupiter in Krebs (April 2026–Mai 2027) trifft den Aszendenten — GROSSES Expansionsjahr. Sichtbar werden!</p>
+      <p><em>Niemals:</em> Reine Buchhaltung · Call-Center · reiner Verkauf ohne echte Überzeugung. <em>Optimal:</em> Kreative Freiheit · Sinn als Basis · Naturkontakt · Flexible Zeiten.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 11 BEZIEHUNGEN -->
+<div class="section" id="beziehungen">
+  <div class="section-header"><span class="section-number">11</span><h2 class="section-title">Beziehungen &amp; Soziales</h2><span class="section-icon">♀</span></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Idealer Partner &amp; Kompatibilität</div>
+      <p><em>Hohe Kompatibilität:</em> Stier (Sicherheit + Genuss), Skorpion (Wasser-Tiefenverbindung), Krebs (emotionale Heimat), Steinbock (Struktur + Zuverlässigkeit).</p>
+      <p><em>Bindungsstil:</em> Tendenziell ängstlich-sicher — braucht viel Bestätigung, gibt dafür vollständige Hingabe. Heilungsweg: sicherer Bindungsstil durch klare Grenzen.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Wie Liebe gegeben &amp; empfangen wird</div>
+      <p><em>Gibt Liebe durch:</em> Acts of Service, Quality Time (intensive tiefe Gespräche), Words of Affirmation.</p>
+      <p><em>Empfängt Liebe durch:</em> Physical Touch (körperliche Wärme ist Sicherheit), Quality Time.</p>
+      <p><em>Freundschaftsmuster:</em> Wenige, tiefe Freundschaften. Qualität vor Quantität. Braucht nach sozialen Ereignissen Solo-Regenerationszeit.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 12 MONDKALENDER -->
+<div class="section" id="mondkalender">
+  <div class="section-header"><span class="section-number">12</span><h2 class="section-title">Mondkalender — März/April 2026</h2><span class="section-icon">☽</span></div>
+  <p style="color:var(--muted);font-size:13px;margin-bottom:16px;">Energie-Levels 1–10 basierend auf Mondposition, Phase und persönlichem Horoskop.</p>
+  <div class="moon-grid">
+    <div class="moon-day" data-phase="🌖"><div class="moon-date">Mi 19. März 2026</div><div class="moon-sign">Mond in Schütze ~20° — Abnehmend</div><div class="moon-bars"><div class="moon-bar"><span class="moon-score high">8</span><span>Energie</span></div><div class="moon-bar"><span class="moon-score mid">7</span><span>Business</span></div><div class="moon-bar"><span class="moon-score high">8</span><span>Körper</span></div><div class="moon-bar"><span class="moon-score mid">6</span><span>Soziales</span></div></div><div class="moon-tip">Mond im Schütze aktiviert deinen Nordknoten! Philosophie, Studium, Reise-Energie hoch. Ideal für großes Denken und Visionstage. Sport: Laufen in der Natur.</div><div class="moon-avoid">Nicht: Kleinarbeit und Details, emotionale schwere Gespräche</div></div>
+    <div class="moon-day" data-phase="🌖"><div class="moon-date">Do 20. März 2026</div><div class="moon-sign">Mond Schütze/Steinbock — Frühjahrsäquinoktium</div><div class="moon-bars"><div class="moon-bar"><span class="moon-score high">9</span><span>Energie</span></div><div class="moon-bar"><span class="moon-score high">8</span><span>Business</span></div><div class="moon-bar"><span class="moon-score high">8</span><span>Körper</span></div><div class="moon-bar"><span class="moon-score mid">7</span><span>Soziales</span></div></div><div class="moon-tip">Frühjahrsäquinoktium + Mond in deinem Mondzeichen Steinbock: maximale Erdungsenergie. Neue Projekte starten, Quartalsziele setzen. Sport: Schwimmen + Kraft.</div><div class="moon-avoid">Nicht: impulsive Käufe, zu viele Commitments gleichzeitig</div></div>
+    <div class="moon-day" data-phase="🌗"><div class="moon-date">Fr 21. März 2026</div><div class="moon-sign">Mond in Steinbock — Letztes Viertel</div><div class="moon-bars"><div class="moon-bar"><span class="moon-score mid">7</span><span>Energie</span></div><div class="moon-bar"><span class="moon-score mid">6</span><span>Business</span></div><div class="moon-bar"><span class="moon-score mid">7</span><span>Körper</span></div><div class="moon-bar"><span class="moon-score high">8</span><span>Inner Work</span></div></div><div class="moon-tip">Mond im eigenen Zeichen: emotionale Klarheit und Ehrlichkeit. Beziehungsthemen klären (H7). Kraftsport passt gut.</div><div class="moon-avoid">Nicht: Social Media Vergleiche, Überforderung durch soziale Pflichten</div></div>
+    <div class="moon-day" data-phase="🌘"><div class="moon-date">Sa 22.–So 23. März</div><div class="moon-sign">Mond Steinbock → Wassermann</div><div class="moon-bars"><div class="moon-bar"><span class="moon-score mid">6</span><span>Energie</span></div><div class="moon-bar"><span class="moon-score mid">5</span><span>Business</span></div><div class="moon-bar"><span class="moon-score high">8</span><span>Regeneration</span></div><div class="moon-bar"><span class="moon-score mid">6</span><span>Kreativ</span></div></div><div class="moon-tip">Wochenende im abnehmenden Mond: Rückzug, Regeneration, kreative Projekte allein. Sauna Samstag. Sonntag: völlige Ruhe, Natur, Journaling.</div><div class="moon-avoid">Nicht: wichtige Entscheidungen, anstrengende soziale Verpflichtungen</div></div>
+    <div class="moon-day" data-phase="🌑"><div class="moon-date">Fr 29. März 2026</div><div class="moon-sign">☽ NEUMOND in Widder ~8°</div><div class="moon-bars"><div class="moon-bar"><span class="moon-score low">3</span><span>Physisch</span></div><div class="moon-bar"><span class="moon-score high">10</span><span>Ritual</span></div><div class="moon-bar"><span class="moon-score high">9</span><span>Intention</span></div><div class="moon-bar"><span class="moon-score low">2</span><span>Soziales</span></div></div><div class="moon-tip">NEUMOND-RITUAL: Widder-Neumond aktiviert Venus auf deinem MC — starte etwas Neues in Beruf/Sichtbarkeit. Schreibe 3 präzise Intentionen handschriftlich. Leichtes Fasten. Abend: Kerze, Stille.</div><div class="moon-avoid">Nicht: Sofortergebnisse erwarten, alten Streit lösen wollen, intensiver Sport</div></div>
+    <div class="moon-day" data-phase="🌒"><div class="moon-date">Sa 5.–So 6. April</div><div class="moon-sign">Mond in Löwe</div><div class="moon-bars"><div class="moon-bar"><span class="moon-score high">9</span><span>Energie</span></div><div class="moon-bar"><span class="moon-score high">8</span><span>Sichtbark.</span></div><div class="moon-bar"><span class="moon-score high">9</span><span>Körper</span></div><div class="moon-bar"><span class="moon-score high">9</span><span>Soziales</span></div></div><div class="moon-tip">Löwe-Mond = Energie-PEAK! Sichtbarkeit, Auftritte, Feiern, Freude. Ideal für Fotoshootings, Events, soziale Aktivitäten, leidenschaftlichen Sport.</div><div class="moon-avoid">Nicht: Rückzug und Introversion ausleben — das wäre Ressourcenverschwendung</div></div>
+    <div class="moon-day" data-phase="🌕"><div class="moon-date">Mi 9.–Do 10. April</div><div class="moon-sign">☽ VOLLMOND Waage ~19°</div><div class="moon-bars"><div class="moon-bar"><span class="moon-score high">9</span><span>Bezieh.</span></div><div class="moon-bar"><span class="moon-score mid">5</span><span>Solo-Arbeit</span></div><div class="moon-bar"><span class="moon-score high">8</span><span>Kreativ</span></div><div class="moon-bar"><span class="moon-score high">9</span><span>Ritual</span></div></div><div class="moon-tip">VOLLMOND-RITUAL: Vollmond in Waage beleuchtet dein 4. Haus (Heimat/Wurzeln). Klärung von Beziehungsthemen, Dankbarkeitsritual, loslassen was reif wurde. Mondlicht-Meditation draußen.</div><div class="moon-avoid">Nicht: Entscheidungen aus Vollmond-Emotionen — erst 2 Tage warten</div></div>
+  </div>
+</div>
+
+<!-- 13 SUPERHUMAN -->
+<div class="section" id="superhuman">
+  <div class="section-header"><span class="section-number">13</span><h2 class="section-title">Superhuman Protokolle</h2><span class="section-icon">✦</span></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Kälte-Wärme-Therapie</div>
+      <p><em>Protokoll für Fische-Typ:</em> Kein kalter Einstieg. Warm 5 Min → 30 Sek kalt → 2 Min warm → 30 Sek kalt → Ende kalt. Mo/Mi/Fr morgens. Samstag: Sauna + Kaltbad (Nordic Protocol).</p>
+      <p>Wirkung: Dopamin +200%, Noradrenalin +300%, Stimmungs-Baseline dauerhaft höher.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Licht-Protokoll</div>
+      <p><em>Morgen (0–30 Min nach Aufwachen):</em> 10–20 Min natürliches Licht. Kalibriert Cortisol-Rhythmus und Melatonin-Timer.</p>
+      <p><em>Abend (ab 20:00):</em> Dimmerlicht, warme Lichtquellen. Handy: Nachtmodus + Blaulichtfilter Maximum.</p>
+      <p><em>Nacht:</em> Völlige Dunkelheit. Schlafmaske wenn nötig. Mondlicht durch Fenster ist für Fische-Typ förderlich.</p>
+    </div>
+  </div>
+  <div class="grid-2" style="margin-top:0;">
+    <div class="card">
+      <div class="card-title">Atemtechniken</div>
+      <p><em>Morgen-Aktivierung:</em> Wim-Hof 3 Runden — Dopamin-Spike, fokussiert Geist.</p>
+      <p><em>Stress-Sofortmaßnahme:</em> Physiological Sigh — doppeltes Einatmen durch die Nase, langes Ausatmen durch den Mund. 1–2× genügen. Beruhigt NS in unter 30 Sekunden.</p>
+      <p><em>Vagusnerv täglich:</em> Box Breathing 5-5-5-5 × 10 Min. Ideal vor Schlaf oder nach sozialer Interaktion.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Neumond- &amp; Vollmond-Ritual</div>
+      <p><em>Neumond:</em> 24h vorher digitales Fasten. Am Tag: Morgenstille, leichtes Fasten. Abend: Kerzen, Rückblick, 3 Intentionen handschriftlich, 10 Min Meditation, Zettel aufbewahren.</p>
+      <p><em>Vollmond:</em> Beobachten was aufsteigt. Moonlicht-Sitzen 10–20 Min. Journaling: "Was ist reif? Was lasse ich los?" Reinigungsbad mit Bittersalz.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Jahres-Energiemap</div>
+    <p><em>Jan–Feb:</em> Rückzugs- und Planungsphase · <em>Mär:</em> Energie-Peak, neue Projekte, JETZT handeln · <em>Apr–Mai:</em> Aufbauphase, Materialisation · <em>Jun–Jul:</em> Soziale und kreative Hochphase · <em>Aug:</em> Ernte-Energie, Abschlüsse · <em>Sep–Okt:</em> Strukturierung, Planung · <em>Nov–Dez:</em> Tiefe, Rückzug, spirituelle Arbeit.</p>
+  </div>
+</div>
+
+<!-- 14 CHINESISCH -->
+<div class="section" id="chinesisch">
+  <div class="section-header"><span class="section-number">14</span><h2 class="section-title">Chinesisches Horoskop — Vollständig</h2><span class="section-icon">🐕</span></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Holz-Hund (Yang) — 1994</div>
+      <p><em>Hund:</em> loyal, ehrlich, direkt, beschützend, gerecht. Kämpft für das was richtig ist, nicht für das was beliebt ist. Tiefe Moral als innerer Kompass.</p>
+      <p><em>Element Holz:</em> Wachstum, Kreativität, Großzügigkeit. Holz-Hunde sind besonders altruistisch, visionär, kommunikativ.</p>
+      <p><em>Gesundheit (TCM):</em> Holz = Leber und Gallenblase. Leber-entlastende Ernährung: Rucola, Radicchio, Löwenzahn, saure Lebensmittel. Wenig Alkohol. Wut und Frustration ausdrücken — Leber-Medizin für diesen Typ.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Aktuelles Jahr 2026 &amp; Vorschau</div>
+      <p><em>2026 — Holz-Pferd:</em> Gemeinsames Holz-Element — Kreativität und Expansion. Chancen in Kooperation und sozialen Projekten.</p>
+      <p><em>2027 — Feuer-Ziege:</em> Harmonische Energie — kreatives, künstlerisches Jahr. Gut für Partnerschaft.</p>
+      <p><em>Kompatibilität:</em> Beste Verbündete: Pferd, Tiger, Hase. Schwierig: Drache, Ziege, Hahn.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 15 ZYKLEN -->
+<div class="section" id="zyklen">
+  <div class="section-header"><span class="section-number">15</span><h2 class="section-title">Jahreszyklen &amp; Saturn-Rhythmus</h2><span class="section-icon">♄</span></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Aktuelle Positionierung (März 2026)</div>
+      <p><em>Jupiter in Krebs (April 2026–Mai 2027)</em> trifft deinen Aszendenten — GROSSES Expansionsjahr für Persönlichkeit, Sichtbarkeit, persönliches Wachstum. Launches, neue Kapitel, sichtbar werden.</p>
+      <p><em>Lebensphase 32 Jahre:</em> Erste Ernte nach Saturn-Return. Erste echte Führungsqualitäten treten in den Vordergrund.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Nächste 12 Monate — Astrologische Highlights</div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Mär–Apr 2026</div><div class="tl-text">Frühlings-Aktivierung: Venus auf MC, Widder-Energie. IDEAL für neue berufliche Initiativen.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Apr–Mai 2026</div><div class="tl-text">Jupiter berührt Aszendenten: Expansion der Persönlichkeit. Sichtbar werden!</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Jun–Aug 2026</div><div class="tl-text">Sommer-Peak: soziale und kreative Energie maximiert. Jupiter aktiviert H1 und H2.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Sep–Nov 2026</div><div class="tl-text">Herausforderungsphase: Saturn Widder — Authentizitätsprüfung. Was hält wirklich?</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Dez 2026–Jan 2027</div><div class="tl-text">Innere Winter-Arbeit. Planung für das nächste große Kapitel.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FORMEL -->
+<div class="section" id="formel">
+  <div class="section-header"><span class="section-number">✦</span><h2 class="section-title">Die Formel für diesen Superhuman</h2><span class="section-icon">☉</span></div>
+
+  <div class="formula-box">
+    <h2>Die 5 TÄGLICH tun</h2>
+    <div style="text-align:left;margin-top:16px;">
+      <ul class="do-list">
+        <li>10 Min Atemarbeit morgens (Wim-Hof oder Box Breathing) — hält das NS stabil</li>
+        <li>Natürliches Morgenlicht binnen 30 Min nach dem Aufwachen — kalibriert Cortisol und Serotonin</li>
+        <li>Mindestens 20 Min alleine in echter Stille — absolutes Regenerations-Minimum für diesen Typ</li>
+        <li>1 konkreten Schritt in Richtung Nordknoten-Lebensaufgabe (H6: Dienen, Gesundheit, tägliches Handwerk)</li>
+        <li>Körperliche Bewegung im Fließen (Schwimmen, Yoga, Laufen in Natur)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="formula-box" style="margin-top:14px;background:linear-gradient(135deg,rgba(160,80,64,0.06),rgba(123,96,71,0.05));">
+    <h2 style="color:var(--red)">Die 5 NIEMALS tun</h2>
+    <div style="text-align:left;margin-top:16px;">
+      <ul class="dont-list">
+        <li>Alkohol als Entspannungsmittel nutzen — Fische + Neptun = höchstes astrologisches Sucht-Risikoprofil</li>
+        <li>Mehrere Jahre in einer bedeutungsleeren Arbeit bleiben — langsame Seelenvergiftung</li>
+        <li>Konflikte so lange meiden bis sie explodieren — Mars in Fische passiv-aggressiv-Muster zerstört Beziehungen</li>
+        <li>Schlaf chronisch unter 7,5 Stunden — verliert emotionale Regulation dramatisch schneller als andere</li>
+        <li>Die eigene Sensibilität als Schwäche behandeln — sie ist die Quelle von allem was ihn besonders macht</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="formula-box" style="margin-top:14px;">
+    <h2>Das Eine Ding — das alles verändert</h2>
+    <p style="font-size:14px;color:var(--text);margin-top:12px;">Dieser Mensch lebt chronisch zwischen zwei Polen: <em>vollständige Hingabe</em> und <em>Selbstauflösung</em>. Das eine Ding, das alles verändert: <strong style="color:var(--gold-light)">Lernen, mit offenen Grenzen zu fühlen ohne sich aufzulösen.</strong> Wie ein Sieb sein — alles darf hindurchfließen, aber das Sieb bleibt. Das ist seine spirituelle Meisterübung und sein menschlicher Beitrag.</p>
+  </div>
+
+  <div class="formula-box" style="margin-top:14px;">
+    <h2>Größtes ungenutztes Potenzial</h2>
+    <p style="font-size:14px;color:var(--text);margin-top:12px;">H9 Haupthaus + MC Fische + ♃ Jupiter Skorpion H5 = Ein Mensch der das Potenzial hat, <em>tiefgründige Weisheit in eine Form zu bringen, die andere transformiert.</em> Nicht als Guru auf einem Berg — sondern im täglichen Dienst. Das ungenutzte Potenzial: noch traut er sich nicht, diese Tiefe vollständig zu zeigen. Er gibt 60%. Die anderen 40% warten.</p>
+  </div>
+
+  <div style="font-size:clamp(18px,3vw,28px);font-family:'Caveat',cursive;color:var(--gold);font-style:italic;text-align:center;margin:40px 20px;line-height:1.6;">
+    "Ein Ozean, der lernt, seine eigenen Ufer zu sein."
+  </div>
+</div>
+
+<div class="disclaimer">
+  ⚠ Medizinischer Hinweis: Alle Ernährungs-, Supplement- und Gesundheitsempfehlungen in diesem Profil sind allgemeiner Natur und ersetzen keine ärztliche oder therapeutische Beratung. Astrologische Analysen sind persönliche Interpretation und kein medizinisches Instrument.
+</div>
+
+</div>
+<script>
+function scrollTo(id) {
+  const el = document.getElementById(id);
+  if(el) { const y = el.getBoundingClientRect().top + window.pageYOffset - 90; window.scrollTo({top:y,behavior:'smooth'}); }
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+}
+const sections = ['horoskop','erscheinung','nervensystem','energie','kommunikation','ernaehrung','sport','darm','gehirn','staerken','beruf','beziehungen','mondkalender','superhuman','chinesisch','zyklen','formel'];
+window.addEventListener('scroll', () => {
+  let cur = '';
+  for(const id of sections) { const el = document.getElementById(id); if(el && el.getBoundingClientRect().top < 120) cur = id; }
+  if(cur) { document.querySelectorAll('.nav-tab').forEach(t => { if(t.getAttribute('onclick')?.includes(cur)) t.classList.add('active'); else t.classList.remove('active'); }); }
+});
+</script>
+</body>
+</html>
