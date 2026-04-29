@@ -62,3 +62,4 @@ jobs:
               body: 'All 12 blog images have been used. The automation is paused.\n\nTo resume:\n1. Add new images to `blog/images/` numbered 13–24 (or restart at 01–12 with new images)\n2. Update `blog/state.json` — set `nextPost` to the next number you want\n3. The workflow will resume next Wednesday automatically.',
               labels: ['content', 'urgent']
             })
+
