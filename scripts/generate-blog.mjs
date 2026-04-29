@@ -35,9 +35,11 @@ function isoDate() {
 function findImage(num) {
   const dir = join(ROOT, 'blog', 'images')
   const pad = String(num).padStart(2, '0')
-  for (const ext of ['.jpg', '.jpeg', '.png', '.webp']) {
-    const p = join(dir, pad + ext)
-    if (existsSync(p)) return `../../blog/images/${pad}${ext}`
+  for (const name of [pad, String(num)]) {
+    for (const ext of ['.jpg', '.jpeg', '.png', '.webp']) {
+      const p = join(dir, name + ext)
+      if (existsSync(p)) return `../../blog/images/${name}${ext}`
+    }
   }
   return null
 }
