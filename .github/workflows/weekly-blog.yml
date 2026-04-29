@@ -1,0 +1,64 @@
+name: Weekly Blog Post
+
+on:
+  schedule:
+    - cron: '30 6 * * 3'   # Wednesday 08:30 CEST (UTC+2)
+  workflow_dispatch:         # Allow manual trigger from GitHub UI
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install @anthropic-ai/sdk
+
+      - name: Generate blog post
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-blog.mjs
+
+      - name: Commit and push
+        run: |
+          git config user.name "Loop Strategy Bot"
+          git config user.email "bot@loopstrategy.ai"
+          git add -A
+          git diff --staged --quiet || git commit -m "auto: weekly blog post $(date +'%Y-%m-%d')"
+          git push
+
+      - name: Warn — images running low (2 left)
+        if: hashFiles('IMAGES_LOW') != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '⚠️ Blog images running low — 2 remaining',
+              body: 'Only 2 blog images left. Add 12 new images to `blog/images/` numbered 13–24 and update `blog/state.json` to continue the automation.',
+              labels: ['content']
+            })
+
+      - name: Warn — images exhausted
+        if: hashFiles('IMAGES_EXHAUSTED') != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🚨 Blog images exhausted — automation paused',
+              body: 'All 12 blog images have been used. The automation is paused.\n\nTo resume:\n1. Add new images to `blog/images/` numbered 13–24 (or restart at 01–12 with new images)\n2. Update `blog/state.json` — set `nextPost` to the next number you want\n3. The workflow will resume next Wednesday automatically.',
+              labels: ['content', 'urgent']
+            })
