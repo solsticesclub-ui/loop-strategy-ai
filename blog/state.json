@@ -1,4 +1,10 @@
 {
-  "nextPost": 1,
-  "published": []
+  "nextPost": 2,
+  "published": [
+    {
+      "num": 1,
+      "slug": "property-listing-render-before-buyer",
+      "date": "2026-04-29"
+    }
+  ]
 }
