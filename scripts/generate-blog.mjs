@@ -251,22 +251,25 @@ function addCardToBlogIndex({ title, slug, category, date, excerpt, imageFile })
   let html = readFileSync(indexPath, 'utf8')
 
   const imgTag = imageFile
-    ? `<img src="images/${imageFile.split('/').pop()}" alt="${title}" class="blog-card-img" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px 12px 0 0;">`
-    : ''
+    ? `<img src="images/${imageFile.split('/').pop()}" alt="${title}" class="post-card-img" style="width:100%;aspect-ratio:16/9;object-fit:cover;">`
+    : `<div class="post-card-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>`
 
   const newCard = `
-          <a href="/blog/${slug}/" class="blog-card" style="display:flex;flex-direction:column;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;text-decoration:none;transition:transform 0.2s ease;">
-            ${imgTag}
-            <div style="padding:24px;flex:1;display:flex;flex-direction:column;gap:10px;">
-              <span style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:#7db88e;font-weight:600;">${category}</span>
-              <h2 style="font-size:1.05rem;font-weight:400;line-height:1.35;color:#F5EFE6;">${title}</h2>
-              <p style="font-size:0.85rem;color:rgba(245,239,230,0.55);line-height:1.6;flex:1;">${excerpt}</p>
-              <span style="font-size:0.75rem;color:rgba(245,239,230,0.35);">${date}</span>
-            </div>
-          </a>`
+      <a href="/blog/${slug}/" class="post-card">
+        ${imgTag}
+        <div class="post-card-body">
+          <span class="post-tag">${category}</span>
+          <h2>${title}</h2>
+          <p>${excerpt}</p>
+          <div class="post-card-meta">
+            <span>${date}</span>
+            <span class="read-more">Read →</span>
+          </div>
+        </div>
+      </a>`
 
   // Insert before closing </div> of the grid
-  html = html.replace('<!-- END_POSTS -->', newCard + '\n          <!-- END_POSTS -->')
+  html = html.replace('<!-- END_POSTS -->', newCard + '\n      <!-- END_POSTS -->')
   writeFileSync(indexPath, html, 'utf8')
 }
 
