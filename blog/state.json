@@ -1,10 +1,15 @@
 {
-  "nextPost": 2,
+  "nextPost": 3,
   "published": [
     {
       "num": 1,
       "slug": "property-listing-render-before-buyer",
       "date": "2026-04-29"
+    },
+    {
+      "num": 2,
+      "slug": "interior-designers-ai-renders",
+      "date": "2026-05-13"
     }
   ]
 }
