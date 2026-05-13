@@ -378,8 +378,8 @@
       display: flex; align-items: center; justify-content: center; overflow: hidden;
     }
     #she-bg { position: absolute; inset: 0; z-index: 0; }
-    #she-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-    #she-bg-tint { position: absolute; inset: 0; background: rgba(0,0,0,0.18); }
+    #she-bg img, #she-bg video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    #she-bg-tint { position: absolute; inset: 0; background: rgba(0,0,0,0.30); }
     #she-media {
       position: absolute; top: 50%; left: 50%;
       transform: translate(-50%, -50%);
@@ -996,12 +996,12 @@
 <div id="she-wrap">
   <div id="she-viewport">
     <div id="she-bg">
-      <img src="images/Image_20260329_200117.webp" alt="" aria-hidden="true">
+      <video autoplay muted loop playsinline><source src="Images/Video/Home page video background.mp4" type="video/mp4"></video>
       <div id="she-bg-tint"></div>
     </div>
     <div id="she-media">
       <video autoplay muted loop playsinline>
-        <source src="images/Loop_Strategy_AI_hero video.mp4" type="video/mp4">
+        <source src="Images/Video/Home page video.mp4" type="video/mp4">
       </video>
       <div id="she-overlay"></div>
     </div>
