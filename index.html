@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ═══ SEO META ═══ -->
-  <title>Loop Strategy AI — AI Virtual Staging, Property Renders & Cinematic Videos from €36</title>
-  <meta name="description" content="AI virtual staging and property visualisation for real estate agents. Transform listing photos into golden-hour renders, lifestyle scenes, cinematic videos and AI voiceover films. From €36, 1-day delivery. WhatsApp Fanny to start.">
+  <title>Loop Strategy AI — AI Visuals & AI Systems for Luxury Property Developers</title>
+  <meta name="description" content="Loop Strategy AI is a dual-service consultancy for luxury property developers. Visual Intelligence: photorealistic renders in 48 hours from photos, sketches or floor plans. AI Operating System: a custom AI pipeline built for your team in 3 weeks. Founded by Fanny, Belgian architect.">
   <meta name="keywords" content="AI virtual staging, AI property visualisation, virtual home staging AI, cinematic property video AI, day to night real estate photo, AI real estate renders, property photo transformation, AI voiceover property video, virtual staging France Belgium Spain, real estate AI marketing, Ibiza property visualisation, luxury real estate renders">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://loopstrategy.ai/">
@@ -20,15 +20,15 @@
   <link rel="preload" as="video" href="images/Loop_Strategy_AI_hero video.mp4" type="video/mp4">
 
   <!-- ═══ OPEN GRAPH ═══ -->
-  <meta property="og:title" content="Loop Strategy AI — AI Virtual Staging & Property Videos from €36">
-  <meta property="og:description" content="Transform your property photos into renders, lifestyle scenes & cinematic videos. 1-day delivery. Send one photo on WhatsApp to start.">
+  <meta property="og:title" content="Loop Strategy AI — AI Visuals & AI Systems for Property Developers">
+  <meta property="og:description" content="Photorealistic renders in 48 hours. Custom AI pipeline for your team in 3 weeks. A dual-service consultancy for luxury property developers, founded by Fanny — Belgian architect.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://loopstrategy.ai/">
   <meta property="og:image" content="https://loopstrategy.ai/Images/web%20site%20preview.jpg">
   <meta property="og:site_name" content="Loop Strategy AI">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Loop Strategy AI — AI Virtual Staging & Property Videos from €36">
-  <meta name="twitter:description" content="AI virtual staging, golden-hour renders & cinematic property videos. From €36. 1-day delivery.">
+  <meta name="twitter:title" content="Loop Strategy AI — AI Visuals & AI Systems for Property Developers">
+  <meta name="twitter:description" content="Photorealistic renders in 48 hours. Custom AI pipeline in 3 weeks. A consultancy for luxury property developers.">
   <meta name="twitter:image" content="https://loopstrategy.ai/Images/web%20site%20preview.jpg">
 
   <!-- ═══ STRUCTURED DATA ═══ -->
@@ -986,6 +986,106 @@
       .port-item { aspect-ratio: 1/1; grid-column: span 1 !important; }
       .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
     }
+
+    /* ══════════════════════════════════
+       ABOUT BLOCK
+    ══════════════════════════════════ */
+    .about-section { background: var(--dark-2); border-top: 1px solid var(--gold-line); }
+    .about-inner { max-width: 640px; margin: 0 auto; text-align: center; padding: 72px 0; }
+    .about-name { font-size: 1.5rem; font-weight: 300; color: var(--cream); margin-bottom: 20px; }
+    .about-inner p { font-size: 1rem; color: var(--muted); line-height: 1.85; }
+
+    /* ══════════════════════════════════
+       SERVICES — two blocks
+    ══════════════════════════════════ */
+    .services-section { background: var(--dark); }
+    .services-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 28px; margin-top: 52px;
+    }
+    .service-card {
+      background: var(--dark-2); border: 1px solid var(--gold-line);
+      border-radius: 20px; padding: 44px 36px;
+      display: flex; flex-direction: column;
+      transition: border-color var(--ease);
+    }
+    .service-card:hover { border-color: rgba(255,255,255,0.2); }
+    .service-img-placeholder {
+      width: 100%; aspect-ratio: 16/9;
+      background: var(--dark-3); border: 1px dashed rgba(255,255,255,0.1);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-size: 0.62rem; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+    .service-card h3 {
+      font-size: 1.6rem; font-weight: 300; color: var(--cream);
+      margin-bottom: 16px; line-height: 1.22;
+    }
+    .service-card > p {
+      font-size: 0.92rem; color: var(--muted); line-height: 1.85;
+      margin-bottom: 24px; flex: 1;
+    }
+    .service-meta { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 28px; }
+    .service-tag {
+      font-size: 0.7rem; padding: 4px 12px;
+      border: 1px solid rgba(255,255,255,0.12); border-radius: 30px;
+      color: var(--muted); letter-spacing: 0.04em;
+    }
+    @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* ══════════════════════════════════
+       CASE STUDY
+    ══════════════════════════════════ */
+    .case-study-section { background: var(--dark-2); }
+    .case-inner {
+      border: 1px solid var(--gold-line); border-radius: 20px;
+      padding: 56px 48px; margin-top: 52px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: center;
+    }
+    .case-img-placeholder {
+      width: 100%; aspect-ratio: 4/3;
+      background: var(--dark-3); border: 1px dashed rgba(255,255,255,0.1);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-size: 0.62rem; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .case-stats { display: flex; flex-direction: column; gap: 28px; margin: 28px 0; }
+    .case-stat { border-left: 2px solid var(--wa); padding-left: 20px; }
+    .case-stat-val { font-size: 2.6rem; font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: 5px; }
+    .case-stat-lbl { font-size: 0.84rem; color: var(--muted); line-height: 1.5; }
+    .case-note { font-size: 0.8rem; color: var(--muted); font-style: italic; }
+    @media (max-width: 900px) {
+      .case-inner { grid-template-columns: 1fr; gap: 40px; padding: 36px 28px; }
+    }
+
+    /* ══════════════════════════════════
+       VISUALIZATION PRICING — reference table
+    ══════════════════════════════════ */
+    .viz-pricing-section { background: var(--dark-2); }
+    .viz-pricing-table {
+      margin-top: 44px; border: 1px solid var(--gold-line);
+      border-radius: 16px; overflow: hidden;
+    }
+    .viz-pricing-row {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 2fr;
+      border-bottom: 1px solid var(--gold-line); padding: 16px 28px; align-items: center;
+    }
+    .viz-pricing-row:last-child { border-bottom: none; }
+    .viz-pricing-row.header {
+      background: var(--dark-3); font-size: 0.66rem;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+    }
+    .viz-pricing-row:not(.header):hover { background: rgba(255,255,255,0.02); }
+    .viz-name { font-size: 0.92rem; color: var(--cream); }
+    .viz-price { font-size: 0.92rem; color: var(--cream); }
+    .viz-del { font-size: 0.82rem; color: var(--muted); }
+    .viz-output { font-size: 0.82rem; color: var(--muted); }
+    @media (max-width: 768px) {
+      .viz-pricing-row { grid-template-columns: 1fr 1fr; gap: 4px 0; row-gap: 4px; }
+      .viz-output { grid-column: 1 / -1; font-size: 0.75rem; padding-top: 2px; }
+      .viz-pricing-row.header .viz-del,
+      .viz-pricing-row.header .viz-output { display: none; }
+    }
   </style>
 </head>
 
@@ -1010,13 +1110,13 @@
     <a href="/" class="nav-logo"><img src="images/Cream Black Typography Loop Brand Logo.png" alt="Loop Strategy AI" width="120" height="60"></a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="/blog/">Blog</a></li>
+      <li><a href="#case-study">Case Study</a></li>
+      <li><a href="#visualization-pricing">Visualization Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="nav-cta desktop" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I'd%20like%20to%20start%20with%20AI%20property%20visualisation." target="_blank" rel="noopener">
+    <a class="nav-cta desktop" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Get started
+      Let's talk
     </a>
     <button class="nav-burger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
       <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -1030,17 +1130,17 @@
     <svg viewBox="0 0 24 24"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
   </button>
   <a href="#services" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
-  <a href="#pricing" onclick="document.getElementById('mobileMenu').classList.remove('open')">Pricing</a>
-  <a href="#faq" onclick="document.getElementById('mobileMenu').classList.remove('open')">FAQ</a>
-  <a href="/blog/" onclick="document.getElementById('mobileMenu').classList.remove('open')">Blog</a>
-  <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I'd%20like%20to%20start." target="_blank">
+  <a href="#case-study" onclick="document.getElementById('mobileMenu').classList.remove('open')">Case Study</a>
+  <a href="#visualization-pricing" onclick="document.getElementById('mobileMenu').classList.remove('open')">Visualization Pricing</a>
+  <a href="#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
+  <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank">
     <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp Fanny
+    Let's talk
   </a>
 </div>
 
 <!-- AIO entity paragraph — crawlable, visually hidden -->
-<p style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Loop Strategy AI is a service run by Fanny that generates photorealistic property renders and marketing videos using artificial intelligence, delivered in 48 hours from a photo, sketch, floor plan, or text description, starting from €199. It serves real estate developers, architects, investors, and agents across Europe and the UAE, at 90% less than the cost of a traditional CGI studio.</p>
+<p style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Loop Strategy AI is a dual-service consultancy for luxury property developers, founded by Fanny — a Belgian architect specialized in sustainable design with years of experience on luxury development projects in Belgium, Italy and Spain. The two services are Visual Intelligence (photorealistic renders delivered in 48 hours from photos, sketches, SketchUp models or floor plans, without a CGI studio) and AI Operating System (a custom AI implementation built for your specific development pipeline in three weeks, your team operates it autonomously after delivery). Serves developers, investors and architects across Belgium, France, Spain, Italy, Portugal, Switzerland, Monaco, the UK and the UAE.</p>
 
 <!-- ══ HERO ══ -->
 <!-- ══ SCROLL-EXPAND HERO ══ -->
@@ -1057,8 +1157,8 @@
       <div id="she-overlay"></div>
     </div>
     <div id="she-titles">
-      <h2 id="she-t1">Before the render.</h2>
-      <h2 id="she-t2">Before the <em>brief.</em></h2>
+      <h2 id="she-t1">Your projects move faster</h2>
+      <h2 id="she-t2">than your <em>visuals.</em></h2>
     </div>
     <div id="she-hint">↓ &nbsp; scroll to expand</div>
   </div>
@@ -1067,33 +1167,121 @@
 <!-- TRUST BAR -->
 <div class="trust">
   <div class="trust-track">
-    <div class="trust-item"><div class="trust-dot"></div>No architectural plans required</div>
-    <div class="trust-item"><div class="trust-dot"></div>Works from photos, sketches or text</div>
-    <div class="trust-item"><div class="trust-dot"></div>300 DPI print-ready files included</div>
-    <div class="trust-item"><div class="trust-dot"></div>Brochures · Listings · Investor decks</div>
-    <div class="trust-item"><div class="trust-dot"></div>Marketing video included from €199</div>
-    <div class="trust-item"><div class="trust-dot"></div>48-hour standard delivery</div>
-    <div class="trust-item"><div class="trust-dot"></div>Works from a sketch or floor plan</div>
-    <div class="trust-item"><div class="trust-dot"></div>Pre-sale & off-plan visuals</div>
+    <div class="trust-item"><div class="trust-dot"></div>Works from photos, sketches or floor plans</div>
+    <div class="trust-item"><div class="trust-dot"></div>No CGI studio required</div>
+    <div class="trust-item"><div class="trust-dot"></div>48-hour delivery</div>
+    <div class="trust-item"><div class="trust-dot"></div>Pre-sale &amp; off-plan visuals</div>
+    <div class="trust-item"><div class="trust-dot"></div>Brochures · Investor decks · Planning submissions</div>
+    <div class="trust-item"><div class="trust-dot"></div>Custom AI systems built in 3 weeks</div>
+    <div class="trust-item"><div class="trust-dot"></div>Your team runs it autonomously after I leave</div>
+    <div class="trust-item"><div class="trust-dot"></div>Belgium · Spain · France · Italy · UAE</div>
     <!-- duplicate for seamless loop -->
-    <div class="trust-item"><div class="trust-dot"></div>No architectural plans required</div>
-    <div class="trust-item"><div class="trust-dot"></div>Works from photos, sketches or text</div>
-    <div class="trust-item"><div class="trust-dot"></div>300 DPI print-ready files included</div>
-    <div class="trust-item"><div class="trust-dot"></div>Brochures · Listings · Investor decks</div>
-    <div class="trust-item"><div class="trust-dot"></div>Marketing video included from €199</div>
-    <div class="trust-item"><div class="trust-dot"></div>48-hour standard delivery</div>
-    <div class="trust-item"><div class="trust-dot"></div>Works from a sketch or floor plan</div>
-    <div class="trust-item"><div class="trust-dot"></div>Pre-sale & off-plan visuals</div>
+    <div class="trust-item"><div class="trust-dot"></div>Works from photos, sketches or floor plans</div>
+    <div class="trust-item"><div class="trust-dot"></div>No CGI studio required</div>
+    <div class="trust-item"><div class="trust-dot"></div>48-hour delivery</div>
+    <div class="trust-item"><div class="trust-dot"></div>Pre-sale &amp; off-plan visuals</div>
+    <div class="trust-item"><div class="trust-dot"></div>Brochures · Investor decks · Planning submissions</div>
+    <div class="trust-item"><div class="trust-dot"></div>Custom AI systems built in 3 weeks</div>
+    <div class="trust-item"><div class="trust-dot"></div>Your team runs it autonomously after I leave</div>
+    <div class="trust-item"><div class="trust-dot"></div>Belgium · Spain · France · Italy · UAE</div>
   </div>
 </div>
 
-<!-- ══ TABBED SERVICES — component 4 pattern ══ -->
-<!-- ══ PRICING ══ -->
-<section class="pricing" id="pricing">
+<!-- ══ ABOUT FANNY ══ -->
+<section class="about-section">
   <div class="container">
-    <span class="eyebrow reveal">Pricing</span>
-    <h2 class="section-title reveal">Choose your transformation.</h2>
-    <div class="pricing-grid">
+    <div class="about-inner reveal">
+      <span class="eyebrow">Who I am</span>
+      <p class="about-name">I'm Fanny.</p>
+      <p>Belgian architect, specialized in sustainable design. I spent years working inside luxury development projects in Belgium, Italy and Spain. Now I build visual intelligence and AI systems for the property world founders who don't have time to wait.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services" class="services-section">
+  <div class="container">
+    <span class="eyebrow reveal">What I build</span>
+    <h2 class="section-title reveal">Two services. One consultancy.</h2>
+    <p class="section-sub reveal">For developers who need to show what doesn't exist yet — and for teams who need AI embedded in their pipeline, not just bolted on top.</p>
+    <div class="services-grid">
+
+      <!-- Visual Intelligence -->
+      <div class="service-card reveal">
+        <div class="service-img-placeholder">Before / After visual example</div>
+        <span class="eyebrow" style="opacity:0.7;margin-bottom:10px;">Visual Intelligence</span>
+        <h3>Show it before it's built.</h3>
+        <p>Photorealistic visuals for developers who need to move a conversation forward before construction begins. Works from photos, SketchUp models, sketches or floor plans. Delivered in 48 hours. No CGI studio, no three-week wait, no architectural plans required.</p>
+        <div class="service-meta">
+          <span class="service-tag">48-hour delivery</span>
+          <span class="service-tag">Photos, SketchUp, sketches</span>
+          <span class="service-tag">Floor plans</span>
+          <span class="service-tag">Pre-sale &amp; off-plan</span>
+          <span class="service-tag">Investor decks</span>
+        </div>
+        <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%27d%20like%20to%20discuss%20visuals%20for%20my%20development." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Let's talk visuals
+        </a>
+      </div>
+
+      <!-- AI Operating System -->
+      <div class="service-card reveal d1">
+        <div class="service-img-placeholder">AI workflow / Notion hub diagram</div>
+        <span class="eyebrow" style="opacity:0.7;margin-bottom:10px;">AI Operating System</span>
+        <h3>AI that runs your pipeline, not just your inbox.</h3>
+        <p>A custom AI implementation built specifically for your development workflow. Delivered in three weeks. Your team operates it independently the moment I leave — no maintenance contract, no ongoing dependency on me.</p>
+        <div class="service-meta">
+          <span class="service-tag">3-week delivery</span>
+          <span class="service-tag">Custom to your pipeline</span>
+          <span class="service-tag">Full team autonomy</span>
+          <span class="service-tag">No maintenance</span>
+        </div>
+        <a class="btn btn-outline" href="https://cal.eu/fanny-loop-strategy/discovery-call" target="_blank" rel="noopener">
+          Book a discovery call →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CASE STUDY ══ -->
+<section id="case-study" class="case-study-section">
+  <div class="container">
+    <span class="eyebrow reveal">Proof</span>
+    <h2 class="section-title reveal">A real project. Real numbers.</h2>
+    <div class="case-inner reveal">
+      <div class="case-img-placeholder">Project photo</div>
+      <div class="case-body">
+        <div class="case-stats">
+          <div class="case-stat">
+            <div class="case-stat-val">9 days</div>
+            <div class="case-stat-lbl">From first brief to signed deal</div>
+          </div>
+          <div class="case-stat">
+            <div class="case-stat-val">70%</div>
+            <div class="case-stat-lbl">Faster than the client's previous timeline on a comparable project</div>
+          </div>
+          <div class="case-stat">
+            <div class="case-stat-val">15×</div>
+            <div class="case-stat-lbl">ROI on an €18,000 investment — one project</div>
+          </div>
+        </div>
+        <p class="case-note">Full case study available on request.</p>
+        <div style="margin-top:28px;">
+          <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%27d%20like%20to%20see%20the%20full%20case%20study." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Request full case study
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLACEHOLDER for old pricing grid — replaced below the fold -->
+<div style="display:none"><div class="pricing-grid">
 
       <!-- Tier 1: Ambiance Magic -->
       <div class="pcard reveal">
@@ -1201,16 +1389,14 @@
       </div>
 
     </div>
-    <p class="pricing-footer reveal">Not sure which tier? <a href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20which%20tier%20is%20right%20for%20my%20project%3F" target="_blank" rel="noopener">Message me on WhatsApp →</a></p>
-  </div>
-</section>
+</div><!-- end hidden old pricing -->
 
 <!-- ══ VIDEO SHOWCASE ══ -->
 <section class="video-showcase">
   <div class="container">
     <span class="eyebrow reveal">In motion</span>
-    <h2 class="section-title reveal">Your project, brought to life.</h2>
-    <p class="section-sub reveal">From a single photo or sketch, I generate cinematic marketing videos that showcase your property at its best — ready for listings, investor decks, and social media.</p>
+    <h2 class="section-title reveal">What photorealistic looks like.</h2>
+    <p class="section-sub reveal">From a floor plan, a SketchUp model, or a single site photograph — delivered in 48 hours, ready for investor decks and planning submissions.</p>
     <div class="video-showcase-grid reveal">
       <div class="video-showcase-item">
         <video autoplay muted loop playsinline src="images/Video/01. Loop_Strategy_AI_hero video.mp4"></video>
@@ -1225,10 +1411,10 @@
   </div>
 </section>
 
-<!-- ══ TESTIMONIALS — component 7 infinite scroll columns ══ -->
+<!-- ══ TESTIMONIALS — developers, investors, architects ══ -->
 <section class="testi-section">
   <div class="container">
-    <span class="eyebrow reveal">Results</span>
+    <span class="eyebrow reveal">From the field</span>
     <h2 class="section-title reveal">What happens when you stop waiting for renders.</h2>
   </div>
   <div class="container" style="max-width:1160px">
@@ -1239,11 +1425,11 @@
         <div class="testi-col-inner">
           <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"We had a serious buyer in the room, the architect was still working. I sent Fanny a floor plan and had visuals by the next morning. The buyer signed before the final plans were done."</p><div class="tcard-author"><div class="tcard-av">MR</div><div><div class="tcard-name">Marc R.</div><div class="tcard-role">Developer · Barcelona</div></div></div></div>
           <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Before Fanny, I was spending €40k on CGI for one resort concept. Now I test three directions in one session and brief my architect on day one with something to react to."</p><div class="tcard-author"><div class="tcard-av">AK</div><div><div class="tcard-name">Alexandre K.</div><div class="tcard-role">Hospitality Investor · Monaco</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The buyer had already moved on by the time our studio delivered the CGI. With Fanny it was 48 hours. We haven't used a traditional renderer since."</p><div class="tcard-author"><div class="tcard-av">PA</div><div><div class="tcard-name">Pierre A.</div><div class="tcard-role">Real Estate Agent · Paris</div></div></div></div>
+          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"I had a sketch and a feeling. Fanny sent back four concept directions the same day. My architect was briefed on day one. We saved two weeks of back-and-forth."</p><div class="tcard-author"><div class="tcard-av">JD</div><div><div class="tcard-name">Julien D.</div><div class="tcard-role">Property Developer · Geneva</div></div></div></div>
           <!-- duplicate for loop -->
           <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"We had a serious buyer in the room, the architect was still working. I sent Fanny a floor plan and had visuals by the next morning. The buyer signed before the final plans were done."</p><div class="tcard-author"><div class="tcard-av">MR</div><div><div class="tcard-name">Marc R.</div><div class="tcard-role">Developer · Barcelona</div></div></div></div>
           <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Before Fanny, I was spending €40k on CGI for one resort concept. Now I test three directions in one session and brief my architect on day one with something to react to."</p><div class="tcard-author"><div class="tcard-av">AK</div><div><div class="tcard-name">Alexandre K.</div><div class="tcard-role">Hospitality Investor · Monaco</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The buyer had already moved on by the time our studio delivered the CGI. With Fanny it was 48 hours. We haven't used a traditional renderer since."</p><div class="tcard-author"><div class="tcard-av">PA</div><div><div class="tcard-name">Pierre A.</div><div class="tcard-role">Real Estate Agent · Paris</div></div></div></div>
+          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"I had a sketch and a feeling. Fanny sent back four concept directions the same day. My architect was briefed on day one. We saved two weeks of back-and-forth."</p><div class="tcard-author"><div class="tcard-av">JD</div><div><div class="tcard-name">Julien D.</div><div class="tcard-role">Property Developer · Geneva</div></div></div></div>
         </div>
       </div>
 
@@ -1252,24 +1438,24 @@
         <div class="testi-col-inner">
           <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Site visit Tuesday, client presentation Thursday. Two days from a raw construction photo to a fully staged interior — every material exactly right. I sent Fanny one photo and a mood board."</p><div class="tcard-author"><div class="tcard-av">SL</div><div><div class="tcard-name">Sophie L.</div><div class="tcard-role">Interior Architect · Paris</div></div></div></div>
           <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Our planning committee needed something visual. We had no renders booked. Fanny delivered five views in 36 hours. The submission went in on time. Permission granted."</p><div class="tcard-author"><div class="tcard-av">BM</div><div><div class="tcard-name">Beatriz M.</div><div class="tcard-role">Project Manager · Lisbon</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"I had a sketch and a feeling. Fanny sent back four concept directions the same day. My architect was briefed on day one. We saved two weeks of back-and-forth."</p><div class="tcard-author"><div class="tcard-av">JD</div><div><div class="tcard-name">Julien D.</div><div class="tcard-role">Property Developer · Geneva</div></div></div></div>
+          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The investor had no patience for hand-wavy descriptions. Fanny turned our plot brief into a full coastal resort concept — pools, massing, ground level. We opened the meeting with that deck."</p><div class="tcard-author"><div class="tcard-av">TN</div><div><div class="tcard-name">Thomas N.</div><div class="tcard-role">Resort Developer · Dubai</div></div></div></div>
           <!-- duplicate -->
           <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Site visit Tuesday, client presentation Thursday. Two days from a raw construction photo to a fully staged interior — every material exactly right. I sent Fanny one photo and a mood board."</p><div class="tcard-author"><div class="tcard-av">SL</div><div><div class="tcard-name">Sophie L.</div><div class="tcard-role">Interior Architect · Paris</div></div></div></div>
           <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Our planning committee needed something visual. We had no renders booked. Fanny delivered five views in 36 hours. The submission went in on time. Permission granted."</p><div class="tcard-author"><div class="tcard-av">BM</div><div><div class="tcard-name">Beatriz M.</div><div class="tcard-role">Project Manager · Lisbon</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"I had a sketch and a feeling. Fanny sent back four concept directions the same day. My architect was briefed on day one. We saved two weeks of back-and-forth."</p><div class="tcard-author"><div class="tcard-av">JD</div><div><div class="tcard-name">Julien D.</div><div class="tcard-role">Property Developer · Geneva</div></div></div></div>
+          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The investor had no patience for hand-wavy descriptions. Fanny turned our plot brief into a full coastal resort concept — pools, massing, ground level. We opened the meeting with that deck."</p><div class="tcard-author"><div class="tcard-av">TN</div><div><div class="tcard-name">Thomas N.</div><div class="tcard-role">Resort Developer · Dubai</div></div></div></div>
         </div>
       </div>
 
       <!-- Column 3 -->
       <div class="testi-col">
         <div class="testi-col-inner">
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"We launched the listing with 9 images instead of 4 — the extra five generated by Fanny. Time on page doubled. We had two viewing requests by end of day."</p><div class="tcard-author"><div class="tcard-av">CR</div><div><div class="tcard-name">Camille R.</div><div class="tcard-role">Luxury Agent · Côte d'Azur</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The investor had no patience for hand-wavy descriptions. Fanny turned our plot brief into a full coastal resort concept — pools, massing, ground level. We opened the meeting with that deck."</p><div class="tcard-author"><div class="tcard-av">TN</div><div><div class="tcard-name">Thomas N.</div><div class="tcard-role">Resort Developer · Dubai</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"I send Fanny a WhatsApp with a description. By the next morning I have renders that make clients feel like the project already exists. That's exactly what closes deals."</p><div class="tcard-author"><div class="tcard-av">IG</div><div><div class="tcard-name">Isabelle G.</div><div class="tcard-role">Real Estate Agency · Lyon</div></div></div></div>
+          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The buyer had already moved on by the time our studio delivered the CGI. With Fanny it was 48 hours. We haven't used a traditional renderer since."</p><div class="tcard-author"><div class="tcard-av">PA</div><div><div class="tcard-name">Pierre A.</div><div class="tcard-role">Real Estate Agent · Paris</div></div></div></div>
+          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"We had a serious buyer in the room, the architect was still working. I sent Fanny a floor plan and had visuals by the next morning. The buyer signed before the final plans were done."</p><div class="tcard-author"><div class="tcard-av">MR</div><div><div class="tcard-name">Marc R.</div><div class="tcard-role">Developer · Barcelona</div></div></div></div>
+          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Before Fanny, I was spending €40k on CGI for one resort concept. Now I test three directions in one session and brief my architect on day one with something to react to."</p><div class="tcard-author"><div class="tcard-av">AK</div><div><div class="tcard-name">Alexandre K.</div><div class="tcard-role">Hospitality Investor · Monaco</div></div></div></div>
           <!-- duplicate -->
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"We launched the listing with 9 images instead of 4 — the extra five generated by Fanny. Time on page doubled. We had two viewing requests by end of day."</p><div class="tcard-author"><div class="tcard-av">CR</div><div><div class="tcard-name">Camille R.</div><div class="tcard-role">Luxury Agent · Côte d'Azur</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The investor had no patience for hand-wavy descriptions. Fanny turned our plot brief into a full coastal resort concept — pools, massing, ground level. We opened the meeting with that deck."</p><div class="tcard-author"><div class="tcard-av">TN</div><div><div class="tcard-name">Thomas N.</div><div class="tcard-role">Resort Developer · Dubai</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"I send Fanny a WhatsApp with a description. By the next morning I have renders that make clients feel like the project already exists. That's exactly what closes deals."</p><div class="tcard-author"><div class="tcard-av">IG</div><div><div class="tcard-name">Isabelle G.</div><div class="tcard-role">Real Estate Agency · Lyon</div></div></div></div>
+          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The buyer had already moved on by the time our studio delivered the CGI. With Fanny it was 48 hours. We haven't used a traditional renderer since."</p><div class="tcard-author"><div class="tcard-av">PA</div><div><div class="tcard-name">Pierre A.</div><div class="tcard-role">Real Estate Agent · Paris</div></div></div></div>
+          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"We had a serious buyer in the room, the architect was still working. I sent Fanny a floor plan and had visuals by the next morning. The buyer signed before the final plans were done."</p><div class="tcard-author"><div class="tcard-av">MR</div><div><div class="tcard-name">Marc R.</div><div class="tcard-role">Developer · Barcelona</div></div></div></div>
+          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Before Fanny, I was spending €40k on CGI for one resort concept. Now I test three directions in one session and brief my architect on day one with something to react to."</p><div class="tcard-author"><div class="tcard-av">AK</div><div><div class="tcard-name">Alexandre K.</div><div class="tcard-role">Hospitality Investor · Monaco</div></div></div></div>
         </div>
       </div>
 
@@ -1277,180 +1463,95 @@
   </div>
 </section>
 
-<!-- ══ MEET FANNY ══ -->
-<section id="services">
+<!-- ══ VISUALIZATION PRICING — reference table ══ -->
+<section id="visualization-pricing" class="viz-pricing-section">
   <div class="container">
-    <span class="eyebrow reveal">What I deliver</span>
-    <h2 class="section-title reveal">Every stage of your project.<br>One service.</h2>
-
-    <div class="tabs-wrap">
-      <div class="tabs-nav reveal" role="tablist">
-        <button class="tab-btn active" onclick="setTab(0,true)" role="tab"><span class="tb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></span>Concept</button>
-        <button class="tab-btn" onclick="setTab(1,true)" role="tab"><span class="tb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span>Presentation</button>
-        <button class="tab-btn" onclick="setTab(2,true)" role="tab"><span class="tb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>Marketing</button>
-        <button class="tab-btn" onclick="setTab(3,true)" role="tab"><span class="tb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>Exploration</button>
+    <span class="eyebrow reveal">Visualization Pricing</span>
+    <h2 class="section-title reveal">Visual Intelligence — reference table.</h2>
+    <p class="section-sub reveal">For developers and agents who want to understand what's available before we speak.</p>
+    <div class="viz-pricing-table reveal">
+      <div class="viz-pricing-row header">
+        <span>Service</span>
+        <span>Price</span>
+        <span>Delivery</span>
+        <span>Output</span>
       </div>
-
-      <div class="tab-panels">
-        <!-- Tab 0: Concept -->
-        <div class="tab-panel active">
-          <div class="tab-panel-img">
-            <img src="images/What I deliver/01 - concept.webp" alt="AI concept generation — from sketch to render" loading="lazy">
-          </div>
-          <div class="tab-panel-body">
-            <h3>From nothing — to a real conversation.</h3>
-            <p>From a reference image, a rough sketch, or a text description — generate enough to have a meaningful conversation with your team, your architect, or your investor. Before any design fee is committed.</p>
-            <div class="tab-tags">
-              <span class="tab-tag">Sketch to render</span>
-              <span class="tab-tag">Multiple directions</span>
-              <span class="tab-tag">Pre-brief visuals</span>
-              <span class="tab-tag">Function change testing</span>
-            </div>
-            <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I'd%20like%20concept%20generation%20visuals%20for%20my%20project." target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Start this project
-            </a>
-          </div>
-        </div>
-
-        <!-- Tab 1: Presentation -->
-        <div class="tab-panel">
-          <div class="tab-panel-img">
-            <img src="images/What I deliver/02 - presentation.webp" alt="AI presentation render — before and after" loading="lazy">
-          </div>
-          <div class="tab-panel-body">
-            <h3>Show it finished, before it is.</h3>
-            <p>Turn an empty shell, a construction site or a 3D model into a fully dressed space — materials, furniture, lighting and atmosphere. Ready for investor meetings and planning submissions.</p>
-            <div class="tab-tags">
-              <span class="tab-tag">Site to staged</span>
-              <span class="tab-tag">Material storytelling</span>
-              <span class="tab-tag">Exploded diagrams</span>
-              <span class="tab-tag">Investor decks</span>
-            </div>
-            <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%20need%20presentation%20visuals%20for%20a%20client%20meeting." target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Start this project
-            </a>
-          </div>
-        </div>
-
-        <!-- Tab 2: Marketing -->
-        <div class="tab-panel">
-          <div class="tab-panel-img">
-            <img src="images/What I deliver/03 - marketing.webp" alt="AI marketing visuals for real estate listings" loading="lazy">
-          </div>
-          <div class="tab-panel-body">
-            <h3>The listing that stops the scroll.</h3>
-            <p>Virtual home staging, day-to-night, landscape scenarios, facade materiality testing — everything an agent needs to launch fast and attract the right buyer.</p>
-            <div class="tab-tags">
-              <span class="tab-tag">Virtual staging</span>
-              <span class="tab-tag">Day to night</span>
-              <span class="tab-tag">Landscape design</span>
-              <span class="tab-tag">Listing-ready</span>
-            </div>
-            <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%20need%20property%20marketing%20visuals%20for%20a%20listing." target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Start this project
-            </a>
-          </div>
-        </div>
-
-        <!-- Tab 3: Exploration -->
-        <div class="tab-panel">
-          <div class="tab-panel-img">
-            <img src="images/What I deliver/04 - exploration.webp" alt="AI architectural exploration — multiple directions" loading="lazy">
-          </div>
-          <div class="tab-panel-body">
-            <h3>Three directions. One afternoon. Zero architect fees yet.</h3>
-            <p>Test form, massing, materiality and site relationships before any specialist is engaged. Eliminate what doesn't work. Brief your architect on day one with something to react to.</p>
-            <div class="tab-tags">
-              <span class="tab-tag">Form studies</span>
-              <span class="tab-tag">Resort scale</span>
-              <span class="tab-tag">Text to image</span>
-              <span class="tab-tag">Urban visions</span>
-            </div>
-            <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I'd%20like%20to%20explore%20architectural%20directions%20for%20a%20site." target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Start this project
-            </a>
-          </div>
-        </div>
+      <div class="viz-pricing-row">
+        <span class="viz-name">Ambiance Magic</span>
+        <span class="viz-price">€36</span>
+        <span class="viz-del">1 day</span>
+        <span class="viz-output">6 images · golden-hour &amp; atmospheric lighting</span>
+      </div>
+      <div class="viz-pricing-row">
+        <span class="viz-name">Lifestyle Projection</span>
+        <span class="viz-price">€36</span>
+        <span class="viz-del">1 day</span>
+        <span class="viz-output">3 images · lifestyle scenes placed into your photos</span>
+      </div>
+      <div class="viz-pricing-row">
+        <span class="viz-name">Event Vibes</span>
+        <span class="viz-price">€36</span>
+        <span class="viz-del">1 day</span>
+        <span class="viz-output">3 images · wedding, corporate or event atmosphere</span>
+      </div>
+      <div class="viz-pricing-row">
+        <span class="viz-name">Cinematic Video</span>
+        <span class="viz-price">from €54</span>
+        <span class="viz-del">2 days</span>
+        <span class="viz-output">30–60s video animated from your photos or AI images</span>
+      </div>
+      <div class="viz-pricing-row">
+        <span class="viz-name">Premium Bundle</span>
+        <span class="viz-price">€63</span>
+        <span class="viz-del">3 days</span>
+        <span class="viz-output">6 Ambiance images + 45s cinematic video</span>
+      </div>
+      <div class="viz-pricing-row">
+        <span class="viz-name">Narrated Video</span>
+        <span class="viz-price">€72</span>
+        <span class="viz-del">3 days</span>
+        <span class="viz-output">Premium Bundle + AI voiceover narration</span>
       </div>
     </div>
+    <p class="pricing-footer reveal">Questions about which fits your project? <a href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%27d%20like%20to%20discuss%20which%20visualization%20service%20fits%20my%20project." target="_blank" rel="noopener">Message me on WhatsApp →</a></p>
   </div>
 </section>
-
-<!-- ══ WHAT I DELIVER ══ -->
-
 
 <!-- ══ FINAL CTA ══ -->
-<section class="final">
+<section class="final" id="contact">
   <div class="container">
-    <span class="eyebrow reveal">Get started today</span>
-    <h2 class="reveal">The idea was always there.<br><em>Now other people can see it too.</em></h2>
-    <p class="reveal">Send me a photo. A sketch. A description. I'll have something back within 48 hours.</p>
-    <div class="final-actions reveal">
-      <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I'd%20like%20to%20start%20with%20AI%20property%20visualisation." target="_blank" rel="noopener">
+    <h2 class="reveal">If you're a developer and this resonates,<br><em>let's talk.</em></h2>
+    <div class="final-actions reveal" style="margin-top:36px;">
+      <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%27d%20like%20to%20discuss%20a%20development%20project." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Start on WhatsApp
+        WhatsApp
       </a>
-      <a class="btn btn-outline" href="#pricing">See all pricing →</a>
+      <a class="btn btn-outline" href="https://cal.eu/fanny-loop-strategy/discovery-call" target="_blank" rel="noopener">Book a discovery call →</a>
     </div>
   </div>
 </section>
 
-<div style="display:flex;justify-content:center;padding:0;">
-  <div style="width:600px;height:1px;background:rgba(255,255,255,0.35);"></div>
-</div>
-
-<section class="fanny-section" id="fanny">
-  <div class="container">
-    <div class="fanny-block reveal">
-      <div class="fanny-photo-wrap">
-        <img src="images/fanny piture.jpeg" alt="Fanny — founder of Loop Strategy AI" class="fanny-photo">
-        <div class="fanny-photo-badge">Fanny · Founder</div>
-      </div>
-      <div class="fanny-text">
-        <span class="eyebrow">The person behind it</span>
-        <h2 class="section-title">Hi, I'm Fanny.</h2>
-        <p>I've spent years working at the intersection of real estate and design — and I got tired of watching great projects stall because the visuals weren't ready in time.</p>
-        <p>So I built Loop Strategy to solve that. Every project that comes through goes through me personally. I handle the brief, the generation, the curation, and the delivery.</p>
-        <p>You get direct access — no agency, no account manager, no middleman. Just send me a message and we'll get started.</p>
-        <div style="margin-top:28px;">
-          <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I'd%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Message me directly
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FAQ — component 8 pattern ══ -->
+<!-- ══ FAQ ══ -->
 <section id="faq">
   <div class="container">
     <div class="faq-layout">
       <div class="faq-sidebar">
         <span class="eyebrow">FAQ</span>
-        <h2 style="font-size:1.9rem;font-weight:300;color:var(--cream);line-height:1.2;margin-bottom:0">Everything you need to know</h2>
-        <p>Common questions before a first order. You can also just message me directly — I respond personally, usually within the hour.</p>
-        <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%20have%20a%20question%20about%20AI%20property%20visualisation." target="_blank" rel="noopener">
+        <h2 style="font-size:1.9rem;font-weight:300;color:var(--cream);line-height:1.2;margin-bottom:0">Common questions</h2>
+        <p>Before a first conversation. You can also message me directly — I respond personally.</p>
+        <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%20have%20a%20question." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Ask on WhatsApp
         </a>
       </div>
-
       <div class="faq-list">
-        <div class="faq-item"><button class="faq-q" onclick="faq(this)">How much does AI property visualisation cost?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Three one-time packs: Agent Pack €199 (6 renders + 30s video), Agency Pack €399 (15 renders + 2 videos + priority delivery), Studio Pack €799 (30 renders + 4 videos + dedicated slot). No subscription, no hidden fees. Custom volume pricing available.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="faq(this)">How long does delivery take?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Standard delivery is 24–48 hours from receiving your input. Agency and Studio packs include priority 24-hour delivery. Rush same-day delivery is available on request.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="faq(this)">What do I need to send to get started?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A single photograph, a hand-drawn sketch, a floor plan, a mood board, or a text description — or any combination. No CAD files or technical briefs required. Just send what you have via WhatsApp.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="faq(this)">Can renders be used in brochures and planning submissions?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. All renders are delivered at 300 DPI — print-ready for brochures, sales packs, investor presentations, and planning submissions. Digital-optimised versions for listings and social media are also included.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="faq(this)">How does this compare to a traditional CGI studio?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Traditional CGI studios charge €800–€8,000 per image, require CAD files, and take 1–3 weeks with only 1–3 revisions. I deliver comparable photorealistic quality at €13–€33 per image, work from any input, and deliver in 24–48 hours — 90–95% lower cost.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="faq(this)">Can you visualise off-plan or unbuilt properties?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — this is one of the most common use cases. Pre-sale and off-plan visualisations from a floor plan, site photo, or concept description. Developers routinely use these to close deals before construction begins.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="faq(this)">What's included in the marketing videos?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Each 15-second video is an AI-generated property marketing film using your renders — multiple angles, atmospheric transitions, lighting variations. Optimised for Instagram, LinkedIn, YouTube, and property portals.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="faq(this)">How many revisions are included?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Agent and Agency packs include 1 revision round. Studio Pack includes 2 rounds. A good brief upfront significantly reduces revision needs. Additional rounds can be added.</div></div></div>
-        <div class="faq-item"><button class="faq-q" onclick="faq(this)">Do you offer deals for agencies with high-volume needs?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. Message me on WhatsApp at +34 630 77 33 54 and we'll figure out what works for your volume and frequency.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="faq(this)">What can I send you to get started?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A photograph, a SketchUp model, a hand-drawn sketch, a floor plan, a mood board, or a text description — or any combination. No CAD files or technical briefs required. Send what you have on WhatsApp and we'll take it from there.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="faq(this)">How long does delivery take for visuals?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Standard delivery is 48 hours from receiving your brief. Rush delivery is available on request.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="faq(this)">Can you visualise off-plan or unbuilt developments?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — this is the core use case. Pre-sale and off-plan visualisations from a floor plan, site photo, or concept description. Developers use these to close buyers before a single wall is built.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="faq(this)">Can renders be used in brochures and planning submissions?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. All visuals are delivered print-ready — suitable for brochures, investor presentations, sales packs and planning submissions. Digital-optimised versions for listings and social are also included.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="faq(this)">What does the AI Operating System service involve?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">I map your existing workflow, identify where AI saves the most time, then build and implement a custom AI system tailored to your team's pipeline. Delivered in three weeks. I stay until your team can run it autonomously — no maintenance contract, no ongoing dependency.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="faq(this)">How does this compare to a traditional CGI studio?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Traditional CGI studios charge €800–€8,000 per image, require CAD files, and take 1–3 weeks. I deliver comparable photorealistic quality in 48 hours, working from any input — including a sketch or a site photo.</div></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="faq(this)">Do you work across Europe?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. I work fully remotely. Projects in Belgium, France, Spain, Italy, Portugal, Switzerland, Monaco, the UK and the UAE. Send a WhatsApp from anywhere.</div></div></div>
       </div>
     </div>
   </div>
@@ -1462,8 +1563,8 @@
     <div class="footer-grid">
       <div>
         <img src="images/Cream Black Typography Loop Brand Logo.png" alt="Loop Strategy AI" class="footer-logo">
-        <p class="footer-desc">AI-generated photorealistic property renders and marketing videos. Run personally by Fanny. From €199, delivered in 48 hours.</p>
-        <a class="btn btn-wa" style="font-size:0.77rem;padding:9px 18px;" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I'm%20interested%20in%20AI%20property%20visualisation." target="_blank" rel="noopener">
+        <p class="footer-desc">AI visuals and AI systems for luxury property developers. Run personally by Fanny — Belgian architect, based in Spain.</p>
+        <a class="btn btn-wa" style="font-size:0.77rem;padding:9px 18px;" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           +34 630 77 33 54
         </a>
@@ -1471,38 +1572,31 @@
       <div class="footer-col">
         <h4>Services</h4>
         <ul class="footer-links">
-          <li><a href="#services">Concept Generation</a></li>
-          <li><a href="#services">Presentation</a></li>
-          <li><a href="#services">Property Marketing</a></li>
-          <li><a href="#services">Design Exploration</a></li>
+          <li><a href="#services">Visual Intelligence</a></li>
+          <li><a href="#services">AI Operating System</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Pricing</h4>
+        <h4>Pages</h4>
         <ul class="footer-links">
-          <li><a href="#pricing">Ambiance Magic — €36</a></li>
-          <li><a href="#pricing">Lifestyle Projection — €36</a></li>
-          <li><a href="#pricing">Cinematic Video — from €54</a></li>
-          <li><a href="#pricing">Premium Bundle — €63</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul class="footer-links">
-          <li><a href="#fanny">About Fanny</a></li>
+          <li><a href="#case-study">Case Study</a></li>
+          <li><a href="#visualization-pricing">Visualization Pricing</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
           <li><a href="https://wa.me/34630773354" target="_blank">WhatsApp</a></li>
+          <li><a href="https://cal.eu/fanny-loop-strategy/discovery-call" target="_blank">Book a call</a></li>
           <li><a href="https://loopstrategy.ai">loopstrategy.ai</a></li>
         </ul>
       </div>
     </div>
-    <div style="text-align:center;margin-bottom:20px;padding:14px 24px;background:var(--gold-dim);border:1px solid var(--gold-line);border-radius:30px;font-size:0.82rem;color:var(--cream);">
-      <strong>FREE TRIAL:</strong> send 1 photo + your request → get 1 visual transformation
-    </div>
     <div class="footer-bottom">
       <span>© 2026 Fanny · Loop Strategy AI · All rights reserved</span>
-      <span>AI Visual Intelligence for Real Estate · loopstrategy.ai</span>
+      <span>Visual Intelligence &amp; AI Systems for Property Developers · loopstrategy.ai</span>
     </div>
   </div>
 </footer>
