@@ -430,7 +430,7 @@
     }
     #she-bg { position: absolute; inset: 0; z-index: 0; }
     #she-bg img, #she-bg video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-    #she-bg-tint { position: absolute; inset: 0; background: rgba(0,0,0,0.30); }
+    #she-bg-tint { position: absolute; inset: 0; background: rgba(0,0,0,0.60); }
     #she-media {
       position: absolute; top: 50%; left: 50%;
       transform: translate(-50%, -50%);
@@ -991,7 +991,7 @@
        ABOUT BLOCK
     ══════════════════════════════════ */
     .about-section { background: var(--dark-2); border-top: 1px solid var(--gold-line); }
-    .about-inner { display: grid; grid-template-columns: 340px 1fr; gap: 80px; align-items: center; padding: 80px 0; }
+    .about-inner { display: grid; grid-template-columns: 340px 1fr; gap: 80px; align-items: start; padding: 80px 0; }
     .about-photo-wrap { position: relative; flex-shrink: 0; }
     .about-photo {
       width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top;
@@ -1004,12 +1004,12 @@
       border-radius: 30px; font-size: 0.77rem; color: var(--cream); letter-spacing: 0.06em;
     }
     .about-name {
-      font-size: clamp(2.4rem, 4vw, 3.4rem); font-weight: 300;
+      font-size: clamp(1.6rem, 2.6vw, 2.1rem); font-weight: 300;
       color: var(--cream); margin-bottom: 6px; line-height: 1.1;
     }
     .about-role {
       font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--wa); margin-bottom: 28px; display: block;
+      color: var(--cream); margin-bottom: 28px; display: block;
     }
     .about-text p.about-para { font-size: 0.97rem; color: var(--muted); line-height: 1.9; margin-bottom: 32px; }
     @media (max-width: 900px) {
@@ -1065,12 +1065,10 @@
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 64px; align-items: center;
     }
-    .case-img-placeholder {
-      width: 100%; aspect-ratio: 4/3;
-      background: var(--dark-3); border: 1px dashed rgba(255,255,255,0.1);
-      border-radius: 12px; display: flex; align-items: center; justify-content: center;
-      font-size: 0.62rem; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase;
+    .case-video-wrap {
+      width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden;
     }
+    .case-video-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
     .case-stats { display: flex; flex-direction: column; gap: 28px; margin: 28px 0; }
     .case-stat { border-left: 2px solid var(--wa); padding-left: 20px; }
     .case-stat-val { font-size: 2.6rem; font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: 5px; }
@@ -1084,46 +1082,25 @@
        VISUALIZATION PRICING — reference table
     ══════════════════════════════════ */
     .viz-pricing-section { background: var(--dark-2); }
-    .viz-pricing-table {
-      margin-top: 44px; border: 1px solid var(--gold-line);
+    .viz-card-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 44px;
+    }
+    .viz-card {
+      background: var(--dark-3); border: 1px solid var(--gold-line);
       border-radius: 16px; overflow: hidden;
+      transition: border-color 0.2s;
     }
-    .viz-pricing-row {
-      display: grid; grid-template-columns: 3fr 1fr 1fr 2fr;
-      border-bottom: 1px solid var(--gold-line); padding: 0 28px 0 0; align-items: stretch;
-    }
-    .viz-pricing-row:last-child { border-bottom: none; }
-    .viz-pricing-row.header {
-      background: var(--dark-3); font-size: 0.66rem;
-      letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
-      padding: 14px 28px; align-items: center;
-    }
-    .viz-pricing-row:not(.header):hover { background: rgba(255,255,255,0.02); }
-    .viz-name-cell {
-      display: flex; align-items: center; gap: 16px; padding: 0;
-    }
-    .viz-thumb {
-      width: 120px; flex-shrink: 0;
-      aspect-ratio: 16/9; overflow: hidden;
-      border-right: 1px solid var(--gold-line);
-      margin: 3px 0 3px 0;
-      border-radius: 4px 0 0 4px;
-    }
-    .viz-thumb video { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .viz-name { font-size: 0.92rem; color: var(--cream); padding: 16px 0; }
-    .viz-price { font-size: 0.92rem; color: var(--cream); padding: 16px 0; }
-    .viz-del { font-size: 0.82rem; color: var(--muted); padding: 16px 0; }
-    .viz-output { font-size: 0.82rem; color: var(--muted); padding: 16px 0; }
+    .viz-card:hover { border-color: rgba(255,255,255,0.18); }
+    .viz-card-video { width: 100%; aspect-ratio: 16/9; overflow: hidden; }
+    .viz-card-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .viz-card-body { padding: 18px 22px 22px; }
+    .viz-card-name { font-size: 1rem; color: var(--cream); font-weight: 400; margin-bottom: 8px; }
+    .viz-card-meta { display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px; }
+    .viz-card-price-val { font-size: 1.2rem; font-weight: 300; color: var(--cream); }
+    .viz-card-del-val { font-size: 0.78rem; color: var(--muted); }
+    .viz-card-output-val { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
     @media (max-width: 768px) {
-      .viz-pricing-row { grid-template-columns: 1fr 1fr; padding-right: 16px; }
-      .viz-thumb { width: 80px; }
-      .viz-output { grid-column: 1 / -1; font-size: 0.75rem; padding: 0 0 12px 96px; }
-      .viz-pricing-row.header .viz-del,
-      .viz-pricing-row.header .viz-output { display: none; }
-    }
-    @media (max-width: 480px) {
-      .viz-thumb { display: none; }
-      .viz-output { padding-left: 16px; }
+      .viz-card-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1288,7 +1265,11 @@
     <span class="eyebrow reveal">Proof</span>
     <h2 class="section-title reveal">A real project. Real numbers.</h2>
     <div class="case-inner reveal">
-      <div class="case-img-placeholder">Project photo</div>
+      <div class="case-video-wrap">
+        <video autoplay muted loop playsinline>
+          <source src="Images/Prices/Tier 6_Narrated Video.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="case-body">
         <div class="case-stats">
           <div class="case-stat">
@@ -1505,66 +1486,54 @@
     <span class="eyebrow reveal">Visualization Pricing</span>
     <h2 class="section-title reveal">Visual Intelligence — reference table.</h2>
     <p class="section-sub reveal">For developers and agents who want to understand what's available before we speak.</p>
-    <div class="viz-pricing-table reveal">
-      <div class="viz-pricing-row header">
-        <span>Service</span>
-        <span>Price</span>
-        <span>Delivery</span>
-        <span>Output</span>
-      </div>
-      <div class="viz-pricing-row">
-        <div class="viz-name-cell">
-          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 1_Ambiance Magic.mp4" type="video/mp4"></video></div>
-          <span class="viz-name">Ambiance Magic</span>
+    <div class="viz-card-grid reveal">
+      <div class="viz-card">
+        <div class="viz-card-video"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 1_Ambiance Magic.mp4" type="video/mp4"></video></div>
+        <div class="viz-card-body">
+          <div class="viz-card-name">Ambiance Magic</div>
+          <div class="viz-card-meta"><span class="viz-card-price-val">€36</span><span class="viz-card-del-val">1 day</span></div>
+          <div class="viz-card-output-val">6 images · golden-hour &amp; atmospheric lighting</div>
         </div>
-        <span class="viz-price">€36</span>
-        <span class="viz-del">1 day</span>
-        <span class="viz-output">6 images · golden-hour &amp; atmospheric lighting</span>
       </div>
-      <div class="viz-pricing-row">
-        <div class="viz-name-cell">
-          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 2_Lifestyle Projection.mp4" type="video/mp4"></video></div>
-          <span class="viz-name">Lifestyle Projection</span>
+      <div class="viz-card">
+        <div class="viz-card-video"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 2_Lifestyle Projection.mp4" type="video/mp4"></video></div>
+        <div class="viz-card-body">
+          <div class="viz-card-name">Lifestyle Projection</div>
+          <div class="viz-card-meta"><span class="viz-card-price-val">€36</span><span class="viz-card-del-val">1 day</span></div>
+          <div class="viz-card-output-val">3 images · lifestyle scenes placed into your photos</div>
         </div>
-        <span class="viz-price">€36</span>
-        <span class="viz-del">1 day</span>
-        <span class="viz-output">3 images · lifestyle scenes placed into your photos</span>
       </div>
-      <div class="viz-pricing-row">
-        <div class="viz-name-cell">
-          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 3_Event Vibes.mp4" type="video/mp4"></video></div>
-          <span class="viz-name">Event Vibes</span>
+      <div class="viz-card">
+        <div class="viz-card-video"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 3_Event Vibes.mp4" type="video/mp4"></video></div>
+        <div class="viz-card-body">
+          <div class="viz-card-name">Event Vibes</div>
+          <div class="viz-card-meta"><span class="viz-card-price-val">€36</span><span class="viz-card-del-val">1 day</span></div>
+          <div class="viz-card-output-val">3 images · wedding, corporate or event atmosphere</div>
         </div>
-        <span class="viz-price">€36</span>
-        <span class="viz-del">1 day</span>
-        <span class="viz-output">3 images · wedding, corporate or event atmosphere</span>
       </div>
-      <div class="viz-pricing-row">
-        <div class="viz-name-cell">
-          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 4_Cinematic Video.mp4" type="video/mp4"></video></div>
-          <span class="viz-name">Cinematic Video</span>
+      <div class="viz-card">
+        <div class="viz-card-video"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 4_Cinematic Video.mp4" type="video/mp4"></video></div>
+        <div class="viz-card-body">
+          <div class="viz-card-name">Cinematic Video</div>
+          <div class="viz-card-meta"><span class="viz-card-price-val">from €54</span><span class="viz-card-del-val">2 days</span></div>
+          <div class="viz-card-output-val">30–60s video animated from your photos or AI images</div>
         </div>
-        <span class="viz-price">from €54</span>
-        <span class="viz-del">2 days</span>
-        <span class="viz-output">30–60s video animated from your photos or AI images</span>
       </div>
-      <div class="viz-pricing-row">
-        <div class="viz-name-cell">
-          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 5_Premium Bundle.mp4" type="video/mp4"></video></div>
-          <span class="viz-name">Premium Bundle</span>
+      <div class="viz-card">
+        <div class="viz-card-video"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 5_Premium Bundle.mp4" type="video/mp4"></video></div>
+        <div class="viz-card-body">
+          <div class="viz-card-name">Premium Bundle</div>
+          <div class="viz-card-meta"><span class="viz-card-price-val">€63</span><span class="viz-card-del-val">3 days</span></div>
+          <div class="viz-card-output-val">6 Ambiance images + 45s cinematic video</div>
         </div>
-        <span class="viz-price">€63</span>
-        <span class="viz-del">3 days</span>
-        <span class="viz-output">6 Ambiance images + 45s cinematic video</span>
       </div>
-      <div class="viz-pricing-row">
-        <div class="viz-name-cell">
-          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 6_Narrated Video.mp4" type="video/mp4"></video></div>
-          <span class="viz-name">Narrated Video</span>
+      <div class="viz-card">
+        <div class="viz-card-video"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 6_Narrated Video.mp4" type="video/mp4"></video></div>
+        <div class="viz-card-body">
+          <div class="viz-card-name">Narrated Video</div>
+          <div class="viz-card-meta"><span class="viz-card-price-val">€72</span><span class="viz-card-del-val">3 days</span></div>
+          <div class="viz-card-output-val">Premium Bundle + AI voiceover narration</div>
         </div>
-        <span class="viz-price">€72</span>
-        <span class="viz-del">3 days</span>
-        <span class="viz-output">Premium Bundle + AI voiceover narration</span>
       </div>
     </div>
     <p class="pricing-footer reveal">Questions about which fits your project? <a href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%27d%20like%20to%20discuss%20which%20visualization%20service%20fits%20my%20project." target="_blank" rel="noopener">Message me on WhatsApp →</a></p>
