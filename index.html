@@ -794,7 +794,7 @@
     .video-showcase { background: var(--dark); }
     .video-showcase-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 12px;
       margin-top: 44px;
     }
@@ -1039,6 +1039,10 @@
       font-size: 0.62rem; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase;
       margin-bottom: 32px;
     }
+    .service-card-video {
+      width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; margin-bottom: 32px;
+    }
+    .service-card-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
     .service-card h3 {
       font-size: 1.6rem; font-weight: 300; color: var(--cream);
       margin-bottom: 16px; line-height: 1.22;
@@ -1066,7 +1070,7 @@
       gap: 64px; align-items: center;
     }
     .case-video-wrap {
-      width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden;
+      width: 100%; aspect-ratio: 3/4; border-radius: 12px; overflow: hidden;
     }
     .case-video-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; }
     .case-stats { display: flex; flex-direction: column; gap: 28px; margin: 28px 0; }
@@ -1221,7 +1225,9 @@
 
       <!-- Visual Intelligence -->
       <div class="service-card reveal">
-        <div class="service-img-placeholder">Before / After visual example</div>
+        <div class="service-card-video">
+          <video autoplay muted loop playsinline src="images/Video/Show it before it's built..mp4"></video>
+        </div>
         <span class="eyebrow" style="opacity:0.7;margin-bottom:10px;">Visual Intelligence</span>
         <h3>Show it before it's built.</h3>
         <p>Photorealistic visuals for developers who need to move a conversation forward before construction begins. Works from photos, SketchUp models, sketches or floor plans. Delivered in 48 hours. No CGI studio, no three-week wait, no architectural plans required.</p>
@@ -1267,7 +1273,7 @@
     <div class="case-inner reveal">
       <div class="case-video-wrap">
         <video autoplay muted loop playsinline>
-          <source src="Images/Prices/Tier 6_Narrated Video.mp4" type="video/mp4">
+          <source src="images/Video/proof.mp4" type="video/mp4">
         </video>
       </div>
       <div class="case-body">
@@ -1423,9 +1429,6 @@
       </div>
       <div class="video-showcase-item">
         <video autoplay muted loop playsinline src="images/Video/03. Loop_Strategy_AI_hero video.mp4"></video>
-      </div>
-      <div class="video-showcase-item">
-        <video autoplay muted loop playsinline src="images/Video/Show it before it's built..mp4"></video>
       </div>
     </div>
   </div>
