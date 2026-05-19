@@ -991,9 +991,24 @@
        ABOUT BLOCK
     ══════════════════════════════════ */
     .about-section { background: var(--dark-2); border-top: 1px solid var(--gold-line); }
-    .about-inner { max-width: 640px; margin: 0 auto; text-align: center; padding: 72px 0; }
-    .about-name { font-size: 1.5rem; font-weight: 300; color: var(--cream); margin-bottom: 20px; }
-    .about-inner p { font-size: 1rem; color: var(--muted); line-height: 1.85; }
+    .about-inner { display: grid; grid-template-columns: 320px 1fr; gap: 72px; align-items: center; padding: 72px 0; }
+    .about-photo-wrap { position: relative; flex-shrink: 0; }
+    .about-photo {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top;
+      border-radius: 16px; display: block;
+    }
+    .about-photo-badge {
+      position: absolute; bottom: 18px; left: 18px;
+      background: rgba(18,12,7,0.78); backdrop-filter: blur(10px);
+      border: 1px solid var(--gold-line); padding: 7px 16px;
+      border-radius: 30px; font-size: 0.77rem; color: var(--cream); letter-spacing: 0.06em;
+    }
+    .about-name { font-size: 2rem; font-weight: 300; color: var(--cream); margin-bottom: 20px; line-height: 1.15; }
+    .about-text p { font-size: 0.96rem; color: var(--muted); line-height: 1.85; }
+    @media (max-width: 900px) {
+      .about-inner { grid-template-columns: 1fr; gap: 36px; }
+      .about-photo { aspect-ratio: 4/3; }
+    }
 
     /* ══════════════════════════════════
        SERVICES — two blocks
@@ -1067,24 +1082,39 @@
       border-radius: 16px; overflow: hidden;
     }
     .viz-pricing-row {
-      display: grid; grid-template-columns: 2fr 1fr 1fr 2fr;
-      border-bottom: 1px solid var(--gold-line); padding: 16px 28px; align-items: center;
+      display: grid; grid-template-columns: 3fr 1fr 1fr 2fr;
+      border-bottom: 1px solid var(--gold-line); padding: 0 28px 0 0; align-items: stretch;
     }
     .viz-pricing-row:last-child { border-bottom: none; }
     .viz-pricing-row.header {
       background: var(--dark-3); font-size: 0.66rem;
       letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+      padding: 14px 28px; align-items: center;
     }
     .viz-pricing-row:not(.header):hover { background: rgba(255,255,255,0.02); }
-    .viz-name { font-size: 0.92rem; color: var(--cream); }
-    .viz-price { font-size: 0.92rem; color: var(--cream); }
-    .viz-del { font-size: 0.82rem; color: var(--muted); }
-    .viz-output { font-size: 0.82rem; color: var(--muted); }
+    .viz-name-cell {
+      display: flex; align-items: center; gap: 16px; padding: 0;
+    }
+    .viz-thumb {
+      width: 120px; flex-shrink: 0;
+      aspect-ratio: 16/9; overflow: hidden;
+      border-right: 1px solid var(--gold-line);
+    }
+    .viz-thumb video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .viz-name { font-size: 0.92rem; color: var(--cream); padding: 16px 0; }
+    .viz-price { font-size: 0.92rem; color: var(--cream); padding: 16px 0; }
+    .viz-del { font-size: 0.82rem; color: var(--muted); padding: 16px 0; }
+    .viz-output { font-size: 0.82rem; color: var(--muted); padding: 16px 0; }
     @media (max-width: 768px) {
-      .viz-pricing-row { grid-template-columns: 1fr 1fr; gap: 4px 0; row-gap: 4px; }
-      .viz-output { grid-column: 1 / -1; font-size: 0.75rem; padding-top: 2px; }
+      .viz-pricing-row { grid-template-columns: 1fr 1fr; padding-right: 16px; }
+      .viz-thumb { width: 80px; }
+      .viz-output { grid-column: 1 / -1; font-size: 0.75rem; padding: 0 0 12px 96px; }
       .viz-pricing-row.header .viz-del,
       .viz-pricing-row.header .viz-output { display: none; }
+    }
+    @media (max-width: 480px) {
+      .viz-thumb { display: none; }
+      .viz-output { padding-left: 16px; }
     }
   </style>
 </head>
@@ -1167,23 +1197,17 @@
 <!-- TRUST BAR -->
 <div class="trust">
   <div class="trust-track">
+    <div class="trust-item"><div class="trust-dot"></div>Custom AI systems built in 3 weeks</div>
     <div class="trust-item"><div class="trust-dot"></div>Works from photos, sketches or floor plans</div>
     <div class="trust-item"><div class="trust-dot"></div>No CGI studio required</div>
     <div class="trust-item"><div class="trust-dot"></div>48-hour delivery</div>
     <div class="trust-item"><div class="trust-dot"></div>Pre-sale &amp; off-plan visuals</div>
-    <div class="trust-item"><div class="trust-dot"></div>Brochures · Investor decks · Planning submissions</div>
-    <div class="trust-item"><div class="trust-dot"></div>Custom AI systems built in 3 weeks</div>
-    <div class="trust-item"><div class="trust-dot"></div>Your team runs it autonomously after I leave</div>
-    <div class="trust-item"><div class="trust-dot"></div>Belgium · Spain · France · Italy · UAE</div>
     <!-- duplicate for seamless loop -->
+    <div class="trust-item"><div class="trust-dot"></div>Custom AI systems built in 3 weeks</div>
     <div class="trust-item"><div class="trust-dot"></div>Works from photos, sketches or floor plans</div>
     <div class="trust-item"><div class="trust-dot"></div>No CGI studio required</div>
     <div class="trust-item"><div class="trust-dot"></div>48-hour delivery</div>
     <div class="trust-item"><div class="trust-dot"></div>Pre-sale &amp; off-plan visuals</div>
-    <div class="trust-item"><div class="trust-dot"></div>Brochures · Investor decks · Planning submissions</div>
-    <div class="trust-item"><div class="trust-dot"></div>Custom AI systems built in 3 weeks</div>
-    <div class="trust-item"><div class="trust-dot"></div>Your team runs it autonomously after I leave</div>
-    <div class="trust-item"><div class="trust-dot"></div>Belgium · Spain · France · Italy · UAE</div>
   </div>
 </div>
 
@@ -1191,9 +1215,15 @@
 <section class="about-section">
   <div class="container">
     <div class="about-inner reveal">
-      <span class="eyebrow">Who I am</span>
-      <p class="about-name">I'm Fanny.</p>
-      <p>Belgian architect, specialized in sustainable design. I spent years working inside luxury development projects in Belgium, Italy and Spain. Now I build visual intelligence and AI systems for the property world founders who don't have time to wait.</p>
+      <div class="about-photo-wrap">
+        <img src="images/fanny piture.jpeg" alt="Fanny — founder of Loop Strategy AI" class="about-photo">
+        <div class="about-photo-badge">Fanny · Founder</div>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">Who I am</span>
+        <p class="about-name">I'm Fanny.</p>
+        <p>Belgian architect, specialized in sustainable design. I spent years working inside luxury development projects in Belgium, Italy and Spain. Now I build visual intelligence and AI systems for the property world founders who don't have time to wait.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1477,37 +1507,55 @@
         <span>Output</span>
       </div>
       <div class="viz-pricing-row">
-        <span class="viz-name">Ambiance Magic</span>
+        <div class="viz-name-cell">
+          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 1_Ambiance Magic.mp4" type="video/mp4"></video></div>
+          <span class="viz-name">Ambiance Magic</span>
+        </div>
         <span class="viz-price">€36</span>
         <span class="viz-del">1 day</span>
         <span class="viz-output">6 images · golden-hour &amp; atmospheric lighting</span>
       </div>
       <div class="viz-pricing-row">
-        <span class="viz-name">Lifestyle Projection</span>
+        <div class="viz-name-cell">
+          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 2_Lifestyle Projection.mp4" type="video/mp4"></video></div>
+          <span class="viz-name">Lifestyle Projection</span>
+        </div>
         <span class="viz-price">€36</span>
         <span class="viz-del">1 day</span>
         <span class="viz-output">3 images · lifestyle scenes placed into your photos</span>
       </div>
       <div class="viz-pricing-row">
-        <span class="viz-name">Event Vibes</span>
+        <div class="viz-name-cell">
+          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 3_Event Vibes.mp4" type="video/mp4"></video></div>
+          <span class="viz-name">Event Vibes</span>
+        </div>
         <span class="viz-price">€36</span>
         <span class="viz-del">1 day</span>
         <span class="viz-output">3 images · wedding, corporate or event atmosphere</span>
       </div>
       <div class="viz-pricing-row">
-        <span class="viz-name">Cinematic Video</span>
+        <div class="viz-name-cell">
+          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 4_Cinematic Video.mp4" type="video/mp4"></video></div>
+          <span class="viz-name">Cinematic Video</span>
+        </div>
         <span class="viz-price">from €54</span>
         <span class="viz-del">2 days</span>
         <span class="viz-output">30–60s video animated from your photos or AI images</span>
       </div>
       <div class="viz-pricing-row">
-        <span class="viz-name">Premium Bundle</span>
+        <div class="viz-name-cell">
+          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 5_Premium Bundle.mp4" type="video/mp4"></video></div>
+          <span class="viz-name">Premium Bundle</span>
+        </div>
         <span class="viz-price">€63</span>
         <span class="viz-del">3 days</span>
         <span class="viz-output">6 Ambiance images + 45s cinematic video</span>
       </div>
       <div class="viz-pricing-row">
-        <span class="viz-name">Narrated Video</span>
+        <div class="viz-name-cell">
+          <div class="viz-thumb"><video autoplay muted loop playsinline><source src="Images/Prices/Tier 6_Narrated Video.mp4" type="video/mp4"></video></div>
+          <span class="viz-name">Narrated Video</span>
+        </div>
         <span class="viz-price">€72</span>
         <span class="viz-del">3 days</span>
         <span class="viz-output">Premium Bundle + AI voiceover narration</span>
