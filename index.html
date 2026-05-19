@@ -1103,12 +1103,12 @@
     .viz-card-price-val { font-size: 1.2rem; font-weight: 300; color: var(--cream); }
     .viz-card-del-val { font-size: 0.78rem; color: var(--muted); }
     .viz-card-output-val { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
-    .pack-card { padding: 16px 16px 32px; display: flex; flex-direction: column; }
-    .pack-card .viz-card-video { border-radius: 10px; overflow: hidden; }
-    .pack-card .pack-header { padding: 12px 12px 0; }
-    .pack-card .pack-price { padding: 0 12px; }
-    .pack-card .pack-features { margin-left: 12px; margin-right: 12px; }
-    .pack-card .pack-cta { margin: 0 12px; width: calc(100% - 24px); }
+    .pack-card { padding: 0 0 32px; display: flex; flex-direction: column; overflow: visible; }
+    .pack-card .viz-card-video { margin: 16px 16px 0; width: calc(100% - 32px); border-radius: 10px; overflow: hidden; flex-shrink: 0; }
+    .pack-card .pack-header { padding: 12px 24px 0; }
+    .pack-card .pack-price { padding: 0 24px; }
+    .pack-card .pack-features { margin-left: 24px; margin-right: 24px; }
+    .pack-card .pack-cta { margin: 0 24px; width: calc(100% - 48px); }
     .pack-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
     .pack-name { font-size: 1.05rem; color: var(--cream); font-weight: 500; }
     .pack-delivery { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.07em; }
