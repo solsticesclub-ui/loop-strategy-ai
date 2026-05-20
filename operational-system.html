@@ -151,32 +151,65 @@
     }
 
     /* ── Hero */
-    .os-hero {
-      min-height: 100dvh;
-      position: relative; overflow: hidden;
-      display: flex; align-items: flex-end;
-      padding: 0 0 100px;
+    #she-wrap { position: relative; overflow-x: hidden; }
+    #she-viewport {
+      position: relative; width: 100%; height: 100dvh;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
     }
-    .os-hero-bg { position: absolute; inset: 0; z-index: 0; }
-    .os-hero-bg video { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .os-hero-tint { position: absolute; inset: 0; background: rgba(0,0,0,0.60); }
-    .os-hero-content { position: relative; z-index: 2; }
-    .os-hero-tag {
-      display: inline-flex; align-items: center; gap: 9px;
-      font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 24px;
+    #she-bg { position: absolute; inset: 0; z-index: 0; }
+    #she-bg video { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    #she-bg-tint { position: absolute; inset: 0; background: rgba(0,0,0,0.60); }
+    #she-titles {
+      position: relative; z-index: 10; pointer-events: none;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center; gap: 10px; width: 100%;
     }
-    .os-hero-tag::before { content:''; width: 24px; height: 1px; background: var(--gold); }
-    .os-hero h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      font-weight: 300; line-height: 1.1;
-      color: var(--cream); margin-bottom: 20px; max-width: 680px;
+    #she-t1, #she-t2 {
+      font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 300;
+      color: var(--cream); line-height: 1.1; white-space: nowrap;
     }
-    .os-hero-sub {
-      font-size: 1.05rem; color: var(--muted);
-      line-height: 1.8; max-width: 480px; margin-bottom: 36px;
+    #she-t2 em { font-style: italic; color: var(--gold); }
+    #she-content { opacity: 1; pointer-events: auto; }
+
+    /* ── Trust bar */
+    .trust {
+      border-top: 1px solid var(--gold-line); border-bottom: 1px solid var(--gold-line);
+      padding: 0; overflow: hidden;
     }
-    .os-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .trust-track {
+      display: flex; align-items: center;
+      animation: trustScroll 28s linear infinite; width: max-content;
+    }
+    .trust-track:hover { animation-play-state: paused; }
+    @keyframes trustScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.92rem; color: var(--cream); letter-spacing: 0.02em;
+      white-space: nowrap; padding: 16px 28px;
+    }
+    .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(245,239,230,0.3); flex-shrink: 0; }
+
+    /* ── About */
+    .about-section { background: var(--dark-2); border-top: 1px solid var(--gold-line); }
+    .about-inner { display: grid; grid-template-columns: 340px 1fr; gap: 80px; align-items: start; padding: 80px 0; }
+    .about-photo-wrap { position: relative; flex-shrink: 0; }
+    .about-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; border-radius: 16px; display: block; }
+    .about-photo-badge {
+      position: absolute; bottom: 18px; left: 18px;
+      background: rgba(18,12,7,0.78); backdrop-filter: blur(10px);
+      border: 1px solid var(--gold-line); padding: 7px 16px;
+      border-radius: 30px; font-size: 0.77rem; color: var(--cream); letter-spacing: 0.06em;
+    }
+    .about-name { font-size: clamp(1.6rem, 2.6vw, 2.1rem); font-weight: 300; color: var(--cream); margin-bottom: 6px; line-height: 1.1; }
+    .about-role { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); margin-bottom: 28px; display: block; }
+    .about-text p.about-para { font-size: 0.97rem; color: var(--muted); line-height: 1.9; margin-bottom: 32px; max-width: 340px; }
+    @media (max-width: 900px) {
+      .about-inner { grid-template-columns: 1fr; gap: 40px; padding: 52px 0; }
+      .about-photo { aspect-ratio: 4/3; }
+    }
 
     /* ── Proof / Case Study */
     .case-study-section { background: var(--dark-2); }
@@ -193,6 +226,11 @@
     .case-stat-val { font-size: 2.6rem; font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: 5px; }
     .case-stat-lbl { font-size: 0.84rem; color: var(--muted); line-height: 1.5; }
     .case-note { font-size: 0.8rem; color: var(--muted); font-style: italic; }
+    .case-timeline { display: flex; flex-direction: column; gap: 0; margin-bottom: 36px; }
+    .case-tl-item { display: flex; align-items: flex-start; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--gold-line); }
+    .case-tl-item:first-child { border-top: 1px solid var(--gold-line); }
+    .case-tl-day { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); flex-shrink: 0; width: 52px; padding-top: 2px; }
+    .case-tl-text { font-size: 0.87rem; color: var(--muted); line-height: 1.6; }
     @media (max-width: 900px) {
       .case-inner { grid-template-columns: 1fr; gap: 40px; padding: 36px 28px; }
     }
@@ -379,23 +417,52 @@
 </div>
 
 <!-- HERO -->
-<section class="os-hero">
-  <div class="os-hero-bg">
-    <video autoplay muted loop playsinline>
-      <source src="images/Video/AI operation system.mp4" type="video/mp4">
-    </video>
-    <div class="os-hero-tint"></div>
+<div id="she-wrap">
+  <div id="she-viewport">
+    <div id="she-bg">
+      <video autoplay muted loop playsinline><source src="images/Video/AI operation system.mp4" type="video/mp4"></video>
+      <div id="she-bg-tint"></div>
+    </div>
+    <div id="she-titles">
+      <h2 id="she-t1">Your team is fast enough.</h2>
+      <h2 id="she-t2">Your system <em>isn't.</em></h2>
+    </div>
   </div>
-  <div class="container os-hero-content">
-    <div class="os-hero-tag">AI Operating System</div>
-    <h1>AI that runs your pipeline,<br>not just your inbox.</h1>
-    <p class="os-hero-sub">A custom AI implementation built specifically for your development workflow. Delivered in three weeks. Your team operates it independently the moment I leave — no maintenance contract, no ongoing dependency.</p>
-    <div class="os-hero-actions">
-      <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%27d%20like%20to%20discuss%20the%20AI%20Operating%20System." target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Let's talk
-      </a>
-      <a class="btn btn-outline" href="https://cal.eu/fanny-loop-strategy/discovery-call" target="_blank" rel="noopener">Book a discovery call →</a>
+  <div id="she-content">
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-track">
+    <div class="trust-item"><div class="trust-dot"></div>Custom AI system built in 3 weeks</div>
+    <div class="trust-item"><div class="trust-dot"></div>Full team autonomy from day one</div>
+    <div class="trust-item"><div class="trust-dot"></div>No maintenance contract</div>
+    <div class="trust-item"><div class="trust-dot"></div>Built for your pipeline, not your inbox</div>
+    <div class="trust-item"><div class="trust-dot"></div>Workflow audit included</div>
+    <div class="trust-item"><div class="trust-dot"></div>Custom AI system built in 3 weeks</div>
+    <div class="trust-item"><div class="trust-dot"></div>Full team autonomy from day one</div>
+    <div class="trust-item"><div class="trust-dot"></div>No maintenance contract</div>
+    <div class="trust-item"><div class="trust-dot"></div>Built for your pipeline, not your inbox</div>
+    <div class="trust-item"><div class="trust-dot"></div>Workflow audit included</div>
+  </div>
+</div>
+
+<!-- ABOUT FANNY -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-inner reveal">
+      <div class="about-photo-wrap">
+        <img src="images/fanny piture.jpeg" alt="Fanny — founder of Loop Strategy AI" class="about-photo">
+        <div class="about-photo-badge">Fanny · Founder</div>
+      </div>
+      <div class="about-text">
+        <h2 class="about-name">I'm Fanny.</h2>
+        <span class="about-role">AI strategist · Architect</span>
+        <p class="about-para">I trained in Liège, Spain and Italy with a specialisation in sustainable design at Politecnico di Milano. I spent years working with property developers as an architect. Now I build AI systems and automatisations for them.</p>
+        <a class="btn btn-wa" href="https://wa.me/34630773354?text=Hi%20Fanny%2C%20I%27d%20like%20to%20discuss%20the%20AI%20Operating%20System." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Let's talk
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -403,8 +470,9 @@
 <!-- PROOF / CASE STUDY -->
 <section id="case-study" class="case-study-section">
   <div class="container">
-    <span class="eyebrow reveal">Proof</span>
-    <h2 class="section-title reveal">A real project. Real numbers.</h2>
+    <span class="eyebrow reveal">Case study</span>
+    <h2 class="section-title reveal">€18,000 in. €270,000 out.<br>In nine days.</h2>
+    <p class="section-sub reveal" style="margin-bottom:52px;">A luxury property developer came in with a closing deadline, no AI in their pipeline, and a team running on manual everything. Here's what the system did.</p>
     <div class="case-inner reveal">
       <div class="case-video-wrap">
         <video autoplay muted loop playsinline>
@@ -412,6 +480,24 @@
         </video>
       </div>
       <div class="case-body">
+        <div class="case-timeline">
+          <div class="case-tl-item">
+            <span class="case-tl-day">Day 1</span>
+            <span class="case-tl-text">Full workflow audit. Every task mapped, every bottleneck identified.</span>
+          </div>
+          <div class="case-tl-item">
+            <span class="case-tl-day">Day 3</span>
+            <span class="case-tl-text">Custom AI system designed and configured around their pipeline.</span>
+          </div>
+          <div class="case-tl-item">
+            <span class="case-tl-day">Day 5</span>
+            <span class="case-tl-text">Team trained. Prompt library live. Playbook written and handed over.</span>
+          </div>
+          <div class="case-tl-item">
+            <span class="case-tl-day">Day 9</span>
+            <span class="case-tl-text">Deal signed. The system ran client communications through to close.</span>
+          </div>
+        </div>
         <div class="case-stats">
           <div class="case-stat">
             <div class="case-stat-val">9 days</div>
@@ -419,11 +505,11 @@
           </div>
           <div class="case-stat">
             <div class="case-stat-val">70%</div>
-            <div class="case-stat-lbl">Faster than the client's previous timeline on a comparable project</div>
+            <div class="case-stat-lbl">Faster than their previous comparable project</div>
           </div>
           <div class="case-stat">
             <div class="case-stat-val">15×</div>
-            <div class="case-stat-lbl">ROI on an €18,000 investment — one project</div>
+            <div class="case-stat-lbl">Return on the €18,000 engagement — one project</div>
           </div>
         </div>
         <p class="case-note">Full case study available on request.</p>
@@ -602,6 +688,9 @@
     <p class="final-os-note reveal">Questions? Message me directly on WhatsApp — I respond personally.</p>
   </div>
 </section>
+
+  </div><!-- /she-content -->
+</div><!-- /she-wrap -->
 
 <!-- FOOTER -->
 <footer>
