@@ -162,7 +162,7 @@
     }
     .split-overlay {
       position: absolute; inset: 0;
-      background: rgba(0,0,0,0.81); z-index: 1;
+      background: rgba(0,0,0,0.60); z-index: 1;
     }
     .split-divider {
       width: 1px;
@@ -202,17 +202,6 @@
       background: rgba(255,255,255,0.18);
       border-color: rgba(255,255,255,0.5);
     }
-
-    /* Panel video preview — top-right of each panel */
-    .panel-preview {
-      position: absolute; top: 24px; right: 24px; z-index: 3;
-      width: 108px; height: 152px; border-radius: 12px;
-      overflow: hidden; border: 1px solid rgba(255,255,255,0.22);
-      pointer-events: none;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    }
-    .panel-preview video { width: 100%; height: 100%; object-fit: cover; display: block; }
-    @media (max-width: 768px) { .panel-preview { display: none; } }
 
     /* Center logo overlay */
     .split-logo-center {
@@ -315,11 +304,6 @@
       <source src="images/Video/Show it before it's built..mp4" type="video/mp4">
     </video>
     <div class="split-overlay"></div>
-    <div class="panel-preview">
-      <video autoplay muted loop playsinline>
-        <source src="Images/Video/Home page video.mp4" type="video/mp4">
-      </video>
-    </div>
     <div class="split-content">
       <span class="split-eyebrow">AI Property Visualisation</span>
       <h2 class="split-title">Show it before<br>it's built.</h2>
@@ -336,11 +320,6 @@
       <source src="images/Video/AI operation system homepage.mp4" type="video/mp4">
     </video>
     <div class="split-overlay"></div>
-    <div class="panel-preview">
-      <video autoplay muted loop playsinline>
-        <source src="Images/Video/AI operation system.mp4" type="video/mp4">
-      </video>
-    </div>
     <div class="split-content">
       <span class="split-eyebrow">AI Operating System</span>
       <h2 class="split-title">AI that runs your pipeline,<br>not just your inbox.</h2>
