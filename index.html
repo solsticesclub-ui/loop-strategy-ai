@@ -94,14 +94,15 @@
     }
     .nav-wrap.scrolled { padding: 6px 24px; }
     .nav-pill {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 24px; width: 100%; max-width: 960px;
+      display: grid; grid-template-columns: auto 1fr auto;
+      align-items: center; gap: 16px;
+      width: 100%; max-width: 960px;
       background: #ffffff; border-radius: 999px;
       padding: 5px 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.18);
       transition: background var(--ease);
     }
-    .nav-logo img { height: 60px; width: auto; filter: brightness(0) opacity(0.85); }
-    .nav-links { display: flex; align-items: center; gap: 26px; list-style: none; }
+    .nav-logo img { height: 38px; width: auto; filter: brightness(0) opacity(0.85); }
+    .nav-links { display: flex; align-items: center; justify-content: center; gap: 26px; list-style: none; }
     .nav-links a {
       font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
       color: rgba(18,12,7,0.6); transition: color var(--ease);
@@ -133,12 +134,14 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .nav-cta.desktop { display: none; }
+      .nav-logo { display: none; }
       .nav-burger { display: block; }
       .nav-wrap {
         justify-content: flex-end;
         padding: 16px 16px;
       }
       .nav-pill {
+        display: flex;
         width: auto;
         padding: 10px;
         border-radius: 50%;
@@ -279,6 +282,7 @@
 <!-- NAV -->
 <div class="nav-wrap" id="nav">
   <div class="nav-pill">
+    <a class="nav-logo" href="/"><img src="Images/Cream Black Typography Loop Brand Logo.png" alt="Loop Strategy AI"></a>
     <ul class="nav-links">
       <li><a href="/visualisation">Property Visualisation</a></li>
       <li><a href="/operational-system">Operational System</a></li>
