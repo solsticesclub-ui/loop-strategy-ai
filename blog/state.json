@@ -1,5 +1,5 @@
 {
-  "nextPost": 3,
+  "nextPost": 4,
   "published": [
     {
       "num": 1,
@@ -10,6 +10,11 @@
       "num": 2,
       "slug": "interior-designers-ai-renders",
       "date": "2026-05-13"
+    },
+    {
+      "num": 3,
+      "slug": "real-cost-waiting-traditional-cgi",
+      "date": "2026-05-20"
     }
   ]
 }
