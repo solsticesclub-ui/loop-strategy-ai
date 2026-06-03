@@ -1,5 +1,5 @@
 {
-  "nextPost": 5,
+  "nextPost": 6,
   "published": [
     {
       "num": 1,
@@ -20,6 +20,11 @@
       "num": 4,
       "slug": "architects-ai-visualisation",
       "date": "2026-05-27"
+    },
+    {
+      "num": 5,
+      "slug": "brief-property-render-no-technical-drawings",
+      "date": "2026-06-03"
     }
   ]
 }
