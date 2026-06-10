@@ -1,5 +1,5 @@
 {
-  "nextPost": 6,
+  "nextPost": 7,
   "published": [
     {
       "num": 1,
@@ -25,6 +25,11 @@
       "num": 5,
       "slug": "brief-property-render-no-technical-drawings",
       "date": "2026-06-03"
+    },
+    {
+      "num": 6,
+      "slug": "developers-ai-renders-before-construction",
+      "date": "2026-06-10"
     }
   ]
 }
