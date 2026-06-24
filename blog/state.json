@@ -1,5 +1,5 @@
 {
-  "nextPost": 8,
+  "nextPost": 9,
   "published": [
     {
       "num": 1,
@@ -35,6 +35,11 @@
       "num": 7,
       "slug": "planning-applications-rejected-renders-fix",
       "date": "2026-06-17"
+    },
+    {
+      "num": 8,
+      "slug": "ai-renders-vs-traditional-cgi",
+      "date": "2026-06-24"
     }
   ]
 }
