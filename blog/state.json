@@ -1,5 +1,5 @@
 {
-  "nextPost": 9,
+  "nextPost": 10,
   "published": [
     {
       "num": 1,
@@ -40,6 +40,11 @@
       "num": 8,
       "slug": "ai-renders-vs-traditional-cgi",
       "date": "2026-06-24"
+    },
+    {
+      "num": 9,
+      "slug": "marketing-agencies-property-pitches-ai",
+      "date": "2026-07-01"
     }
   ]
 }
