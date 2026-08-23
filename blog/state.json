@@ -1,5 +1,5 @@
 {
-  "nextPost": 4,
+  "nextPost": 10,
   "published": [
     {
       "num": 1,
@@ -15,6 +15,36 @@
       "num": 3,
       "slug": "real-cost-waiting-traditional-cgi",
       "date": "2026-05-20"
+    },
+    {
+      "num": 4,
+      "slug": "architects-ai-visualisation",
+      "date": "2026-05-27"
+    },
+    {
+      "num": 5,
+      "slug": "brief-property-render-no-technical-drawings",
+      "date": "2026-06-03"
+    },
+    {
+      "num": 6,
+      "slug": "developers-ai-renders-before-construction",
+      "date": "2026-06-10"
+    },
+    {
+      "num": 7,
+      "slug": "planning-applications-rejected-renders-fix",
+      "date": "2026-06-17"
+    },
+    {
+      "num": 8,
+      "slug": "ai-renders-vs-traditional-cgi",
+      "date": "2026-06-24"
+    },
+    {
+      "num": 9,
+      "slug": "marketing-agencies-property-pitches-ai",
+      "date": "2026-07-01"
     }
   ]
 }
