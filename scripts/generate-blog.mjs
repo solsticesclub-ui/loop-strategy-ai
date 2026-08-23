@@ -222,10 +222,10 @@ function buildPostHTML({ title, category, slug, imageFile, date, readTime, intro
     <div class="footer-grid">
       <div>
         <img src="../../images/Cream Black Typography Loop Brand Logo.png" alt="Loop Strategy AI" class="footer-logo">
-        <p class="footer-desc">AI-generated photorealistic property renders and marketing videos. Run personally by Fanny. From €199, delivered in 48 hours.</p>
+        <p class="footer-desc">AI-generated photorealistic property renders and marketing videos. Run personally by Fanny. From €399, delivered in 48 hours.</p>
       </div>
       <div class="footer-col"><h4>Services</h4><ul class="footer-links"><li><a href="/#services">Concept Generation</a></li><li><a href="/#services">Presentation</a></li><li><a href="/#services">Property Marketing</a></li></ul></div>
-      <div class="footer-col"><h4>Pricing</h4><ul class="footer-links"><li><a href="/#pricing">Agent Pack — €199</a></li><li><a href="/#pricing">Agency Pack — €399</a></li><li><a href="/#pricing">Studio Pack — €799</a></li></ul></div>
+      <div class="footer-col"><h4>Pricing</h4><ul class="footer-links"><li><a href="/#pricing">Listing Video — €399</a></li><li><a href="/#pricing">Signature Pack — €699</a></li><li><a href="/#pricing">Lifestyle Pack — €999</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="/#fanny">About Fanny</a></li><li><a href="/#faq">FAQ</a></li><li><a href="/blog/">Blog</a></li><li><a href="https://wa.me/34630773354" target="_blank">WhatsApp</a></li></ul></div>
     </div>
     <div class="footer-bottom">
@@ -312,7 +312,7 @@ async function main() {
     max_tokens: 2000,
     messages: [{
       role: 'user',
-      content: `Write a blog post for Loop Strategy AI, an architectural visualisation studio run by Fanny that produces AI photorealistic renders for property developers, architects, interior designers, and marketing agencies. Delivers in 48h from €199. Contact via WhatsApp.
+      content: `Write a blog post for Loop Strategy AI, an architectural visualisation studio run by Fanny that produces AI photorealistic renders for property developers, architects, interior designers, and marketing agencies. Delivers in 48h from €399. Contact via WhatsApp.
 
 Title: "${post.title}"
 Category: ${post.category}
