@@ -28,27 +28,33 @@
     wait_for_update: 500,
   })
 
-  var s = document.createElement('script')
-  s.async = true
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID
-  document.head.appendChild(s)
-
-  gtag('js', new Date())
-  gtag('config', GA_ID)
+  // Google is not contacted at all until consent is given. Loading gtag.js up front
+  // and relying on denied defaults still fires a cookieless ping — legally arguable,
+  // but it is not what the banner promises the visitor. So the script is injected
+  // only once Accept is clicked, or on later visits once the choice is stored.
+  var loaded = false
+  function loadGA() {
+    if (loaded) return
+    loaded = true
+    gtag('consent', 'update', { analytics_storage: 'granted' })
+    var s = document.createElement('script')
+    s.async = true
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID
+    document.head.appendChild(s)
+    gtag('js', new Date())
+    gtag('config', GA_ID)
+  }
 
   var stored = null
   try { stored = localStorage.getItem(STORAGE_KEY) } catch (e) { /* private mode */ }
 
-  if (stored === 'granted') {
-    gtag('consent', 'update', { analytics_storage: 'granted' })
-    return
-  }
+  if (stored === 'granted') { loadGA(); return }
   if (stored === 'denied') return
 
   // No decision yet — ask.
   function decide(value) {
     try { localStorage.setItem(STORAGE_KEY, value) } catch (e) {}
-    if (value === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' })
+    if (value === 'granted') loadGA()
     var el = document.getElementById('ls-consent-bar')
     if (el) el.remove()
   }
