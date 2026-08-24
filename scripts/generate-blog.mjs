@@ -155,6 +155,7 @@ function buildPostHTML({ title, category, slug, imageFile, date, readTime, intro
     .wa-float:hover { transform: scale(1.1); }
     .wa-float svg { width: 28px; height: 28px; fill: #fff; }
   </style>
+  <script src="/ga.js" defer></script>
 </head>
 <body>
 <div class="nav-wrap" id="nav">
