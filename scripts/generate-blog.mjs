@@ -2,6 +2,7 @@ import Anthropic from '@anthropic-ai/sdk'
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs'
 import { join, dirname, extname } from 'path'
 import { fileURLToPath } from 'url'
+import { buildSitemap } from './generate-sitemap.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -365,6 +366,10 @@ Write in a direct, professional tone. No fluff. Speak to a sophisticated real es
   state.published.push({ num: nextNum, slug: post.slug, date: isoDate() })
   writeFileSync(statePath, JSON.stringify(state, null, 2), 'utf8')
   console.log(`✓ State updated — next post will be #${state.nextPost}`)
+
+  // Without this, every post above is invisible to Google: the sitemap sat frozen
+  // at 2026-05-14 while eight posts shipped past it.
+  buildSitemap(ROOT)
 }
 
 main().catch(err => { console.error(err); process.exit(1) })
