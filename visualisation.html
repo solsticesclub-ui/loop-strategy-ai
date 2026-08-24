@@ -64,6 +64,7 @@
 
     .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
     section { padding: 50px 0; }
+    section[id] { scroll-margin-top: 96px; }
 
     .eyebrow {
       display: inline-block; font-size: 0.68rem; letter-spacing: 0.22em;
@@ -368,6 +369,97 @@
     /* ── Responsive */
     @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } section { padding: 36px 0; } }
+    /* ---- Before / after gallery ---- */
+    .ba-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 28px; margin-top: 52px;
+    }
+    .ba-card { display: flex; flex-direction: column; }
+    .ba-figure {
+      position: relative; width: 100%; overflow: hidden;
+      border-radius: var(--radius); background: var(--dark-2);
+      cursor: ew-resize; touch-action: pan-y; user-select: none;
+      border: 1px solid var(--gold-line);
+    }
+    .ba-figure img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; display: block; pointer-events: none;
+    }
+    .ba-before { z-index: 2; clip-path: inset(0 50% 0 0); will-change: clip-path; }
+    .ba-handle {
+      position: absolute; top: 0; bottom: 0; left: 50%; z-index: 3;
+      width: 2px; margin-left: -1px; background: var(--cream);
+      pointer-events: none; will-change: left;
+      box-shadow: 0 0 14px rgba(0,0,0,0.45);
+    }
+    .ba-knob {
+      position: absolute; top: 50%; left: 50%; width: 42px; height: 42px;
+      transform: translate(-50%, -50%); border-radius: 50%;
+      background: var(--cream); color: var(--dark);
+      display: grid; place-items: center;
+      font-size: 0.78rem; letter-spacing: 0.06em; font-weight: 600;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+    }
+    .ba-tag {
+      position: absolute; z-index: 4; top: 14px;
+      font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+      font-weight: 600; padding: 5px 10px; border-radius: 100px;
+      background: rgba(28,17,8,0.72); color: var(--cream);
+      backdrop-filter: blur(6px); pointer-events: none;
+    }
+    .ba-tag-before { left: 14px; }
+    .ba-tag-after  { right: 14px; }
+    .ba-figure:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+    .ba-meta { padding: 16px 2px 0; }
+    .ba-name {
+      font-size: 1.05rem; font-weight: 400; color: var(--cream);
+      line-height: 1.35; margin-bottom: 6px;
+    }
+    .ba-spec {
+      font-size: 0.8rem; color: var(--muted); line-height: 1.5;
+    }
+    .ba-note {
+      margin-top: 40px; font-size: 0.85rem; color: var(--muted);
+      line-height: 1.6; max-width: 640px;
+    }
+    @media (max-width: 820px) {
+      .ba-grid { grid-template-columns: 1fr; gap: 22px; }
+    }
+    /* ---- Enquiry form ---- */
+    .viz-form-wrap {
+      max-width: 620px; margin: 46px auto 0; text-align: left;
+      padding-top: 34px; border-top: 1px solid var(--gold-line);
+    }
+    .viz-form-intro {
+      font-size: 0.85rem; color: var(--muted);
+      margin-bottom: 20px; text-align: center;
+    }
+    .cform { display: grid; gap: 14px; }
+    .cform-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .cform label {
+      display: block; margin-bottom: 6px;
+      font-size: 0.72rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .cform input, .cform textarea {
+      width: 100%; font-family: inherit; font-size: 0.92rem;
+      background: rgba(255,255,255,0.04); color: var(--cream);
+      border: 1px solid var(--gold-line); border-radius: var(--radius);
+      padding: 12px 14px; transition: border-color var(--ease);
+    }
+    .cform input:focus, .cform textarea:focus { outline: none; border-color: rgba(245,239,230,0.45); }
+    .cform textarea { resize: vertical; min-height: 84px; }
+    .cform button {
+      justify-self: start; margin-top: 4px;
+      background: var(--cream); color: var(--dark);
+      border: none; border-radius: 30px; padding: 13px 30px;
+      font-size: 0.84rem; font-weight: 600; letter-spacing: 0.04em;
+      transition: transform var(--ease), box-shadow var(--ease);
+    }
+    .cform button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.35); }
+    .cform-hp { position: absolute; left: -9999px; opacity: 0; }
+    .cform-note { font-size: 0.75rem; color: var(--muted); line-height: 1.55; }
+    @media (max-width: 620px) { .cform-row { grid-template-columns: 1fr; } }
   </style>
   <script src="/ga.js" defer></script>
 </head>
@@ -445,7 +537,89 @@
 </div>
 
 <!-- ABOUT FANNY -->
-<section class="about-section">
+<section id="portfolio" class="ba-section">
+  <div class="container">
+    <span class="eyebrow reveal">Before / after</span>
+    <h2 class="section-title reveal">One photograph in. A sellable image out.</h2>
+    <p class="ba-note reveal" style="margin-top:0">Drag any image to compare. Every result below started from a single photograph &mdash; no CAD file, no 3D model, no site visit.</p>
+    <div class="ba-grid">
+
+      <div class="ba-card reveal">
+        <div class="ba-figure" style="aspect-ratio:0.8" tabindex="0" role="slider" aria-label="Before and after: construction shell to finished interior" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <img class="ba-after" src="Images/BeforeAfter/01-after.webp" alt="Finished living room with fireplace, mezzanine and layered lighting" width="1200" height="1495" loading="eager" decoding="async">
+          <img class="ba-before" src="Images/BeforeAfter/01-before.webp" alt="The same room as a bare construction shell with exposed plasterboard" width="1200" height="1495" loading="eager" decoding="async">
+          <span class="ba-tag ba-tag-before">Site photo</span>
+          <span class="ba-tag ba-tag-after">Delivered</span>
+          <div class="ba-handle"><span class="ba-knob">&#8596;</span></div>
+        </div>
+        <div class="ba-meta">
+          <div class="ba-name">Sell the room before the plaster is dry</div>
+          <div class="ba-spec">Input: one site photograph &middot; Interior projection with furniture, lighting and materials &middot; 48h</div>
+        </div>
+      </div>
+
+      <div class="ba-card reveal">
+        <div class="ba-figure" style="aspect-ratio:0.8" tabindex="0" role="slider" aria-label="Before and after: daytime photo to night render" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <img class="ba-after" src="Images/BeforeAfter/02-after.webp" alt="The same finca at night, warm interior light spilling onto the pool terrace" width="1200" height="1495" loading="lazy" decoding="async">
+          <img class="ba-before" src="Images/BeforeAfter/02-before.webp" alt="Ibiza finca photographed in flat daylight from across the pool" width="1200" height="1495" loading="lazy" decoding="async">
+          <span class="ba-tag ba-tag-before">Listing photo</span>
+          <span class="ba-tag ba-tag-after">Delivered</span>
+          <div class="ba-handle"><span class="ba-knob">&#8596;</span></div>
+        </div>
+        <div class="ba-meta">
+          <div class="ba-name">The golden-hour shot you never got to take</div>
+          <div class="ba-spec">Input: one listing photograph &middot; Day-to-night transformation with full lighting design &middot; 48h</div>
+        </div>
+      </div>
+
+      <div class="ba-card reveal">
+        <div class="ba-figure" style="aspect-ratio:0.8" tabindex="0" role="slider" aria-label="Before and after: empty room to fully staged dining room" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <img class="ba-after" src="Images/BeforeAfter/04-after.webp" alt="The same room staged as a dining room with table, chairs, chandelier and olive tree" width="1200" height="1597" loading="lazy" decoding="async">
+          <img class="ba-before" src="Images/BeforeAfter/04-before.webp" alt="Long room with beamed ceiling and steel windows, almost empty" width="1200" height="1597" loading="lazy" decoding="async">
+          <span class="ba-tag ba-tag-before">Empty room</span>
+          <span class="ba-tag ba-tag-after">Delivered</span>
+          <div class="ba-handle"><span class="ba-knob">&#8596;</span></div>
+        </div>
+        <div class="ba-meta">
+          <div class="ba-name">Virtual staging that respects the architecture</div>
+          <div class="ba-spec">Input: one photograph of an empty room &middot; Full furnishing, styling and props &middot; 48h</div>
+        </div>
+      </div>
+
+      <div class="ba-card reveal">
+        <div class="ba-figure" style="aspect-ratio:0.8" tabindex="0" role="slider" aria-label="Before and after: two lighting and styling directions for the same room" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <img class="ba-after" src="Images/BeforeAfter/03-after.webp" alt="The same hall restyled with sculptural cloud pendants and warm afternoon light" width="1200" height="1485" loading="lazy" decoding="async">
+          <img class="ba-before" src="Images/BeforeAfter/03-before.webp" alt="Vaulted hall with black pendant lamps and linen curtains" width="1200" height="1485" loading="lazy" decoding="async">
+          <span class="ba-tag ba-tag-before">Direction A</span>
+          <span class="ba-tag ba-tag-after">Direction B</span>
+          <div class="ba-handle"><span class="ba-knob">&#8596;</span></div>
+        </div>
+        <div class="ba-meta">
+          <div class="ba-name">Two directions to react to, same afternoon</div>
+          <div class="ba-spec">Input: one interior photograph &middot; Alternative lighting and furniture direction &middot; Same day</div>
+        </div>
+      </div>
+
+      <div class="ba-card reveal">
+        <div class="ba-figure" style="aspect-ratio:1" tabindex="0" role="slider" aria-label="Before and after: rendered facade in stucco versus natural stone" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <img class="ba-after" src="Images/BeforeAfter/05-after.webp" alt="The same facade rebuilt in rough natural stone with the same openings" width="1200" height="1200" loading="lazy" decoding="async">
+          <img class="ba-before" src="Images/BeforeAfter/05-before.webp" alt="Mediterranean villa facade in smooth cream stucco with arched doors" width="1200" height="1200" loading="lazy" decoding="async">
+          <span class="ba-tag ba-tag-before">Stucco</span>
+          <span class="ba-tag ba-tag-after">Stone</span>
+          <div class="ba-handle"><span class="ba-knob">&#8596;</span></div>
+        </div>
+        <div class="ba-meta">
+          <div class="ba-name">Test a &euro;200k material decision before you make it</div>
+          <div class="ba-spec">Input: one facade view &middot; Material study, same geometry and light &middot; 48h</div>
+        </div>
+      </div>
+
+    </div>
+    <p class="ba-note reveal">Send a photograph on WhatsApp and you get the same thing back within 48 hours.</p>
+  </div>
+</section>
+
+<section id="fanny" class="about-section">
   <div class="container">
     <div class="about-inner reveal">
       <div class="about-photo-wrap">
@@ -605,6 +779,28 @@
       </a>
       <a class="btn btn-outline" href="https://cal.eu/fanny-loop-strategy/discovery-call" target="_blank" rel="noopener">Book a discovery call →</a>
     </div>
+    <div class="viz-form-wrap reveal">
+      <p class="viz-form-intro">Not ready to message? Send the brief and I will come back to you personally.</p>
+      <form class="cform" name="visualisation-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci">
+        <p class="cform-hp"><label>Do not fill this in if you are human: <input name="bot-field" type="text" tabindex="-1" autocomplete="off"></label></p>
+        <div class="cform-row">
+          <div>
+            <label for="vf-name">Name</label>
+            <input id="vf-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div>
+            <label for="vf-email">Email</label>
+            <input id="vf-email" name="email" type="email" required autocomplete="email">
+          </div>
+        </div>
+        <div>
+          <label for="vf-project">What are you working on?</label>
+          <textarea id="vf-project" name="project" rows="3" placeholder="A villa in Ibiza, off-plan, six units. I have site photos and a floor plan."></textarea>
+        </div>
+        <button type="submit">Send it to Fanny</button>
+        <p class="cform-note">I read and answer every message myself. Your details are used to reply to you and nothing else.</p>
+      </form>
+    </div>
     <p class="reveal" style="margin-top:28px; font-size:0.83rem; color:var(--muted);"><a href="/operational-system" style="color:var(--muted); text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(255,255,255,0.25);">Looking for AI implementation across your full operation? That is a separate conversation.</a></p>
   </div>
 </section>
@@ -686,6 +882,49 @@
   window.addEventListener('scroll', () => {
     navWrap.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
+
+
+  // ---- Before / after sliders ----
+  document.querySelectorAll('.ba-figure').forEach(fig => {
+    const before = fig.querySelector('.ba-before');
+    const handle = fig.querySelector('.ba-handle');
+    if (!before || !handle) return;
+    let pct = 50, dragging = false;
+
+    const paint = v => {
+      pct = Math.max(0, Math.min(100, v));
+      before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+      handle.style.left = pct + '%';
+      fig.setAttribute('aria-valuenow', Math.round(pct));
+    };
+    const fromEvent = e => {
+      const r = fig.getBoundingClientRect();
+      paint(((e.clientX - r.left) / r.width) * 100);
+    };
+
+    fig.addEventListener('pointerdown', e => {
+      dragging = true;
+      fig.setPointerCapture(e.pointerId);
+      fromEvent(e);
+    });
+    fig.addEventListener('pointermove', e => { if (dragging) fromEvent(e); });
+    const stop = e => {
+      dragging = false;
+      if (e.pointerId != null && fig.hasPointerCapture(e.pointerId)) fig.releasePointerCapture(e.pointerId);
+    };
+    fig.addEventListener('pointerup', stop);
+    fig.addEventListener('pointercancel', stop);
+
+    fig.addEventListener('keydown', e => {
+      const step = e.shiftKey ? 10 : 4;
+      if (e.key === 'ArrowLeft')  { paint(pct - step); e.preventDefault(); }
+      if (e.key === 'ArrowRight') { paint(pct + step); e.preventDefault(); }
+      if (e.key === 'Home')       { paint(0);   e.preventDefault(); }
+      if (e.key === 'End')        { paint(100); e.preventDefault(); }
+    });
+
+    paint(50);
+  });
 
   const reveals = document.querySelectorAll('.reveal');
   const ro = new IntersectionObserver(entries => {
