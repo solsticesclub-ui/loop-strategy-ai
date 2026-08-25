@@ -276,12 +276,6 @@
       background: var(--dark-3); border: 1px solid var(--gold-line);
       border-radius: 16px; padding: 28px 24px; flex-shrink: 0;
     }
-    .tcard-stars { color: var(--gold); letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 12px; }
-    .tcard-quote { font-size: 0.9rem; color: var(--cream); line-height: 1.68; font-style: italic; margin-bottom: 20px; }
-    .tcard-author { display: flex; align-items: center; gap: 10px; }
-    .tcard-av { width: 38px; height: 38px; border-radius: 50%; background: var(--dark-4); border: 1px solid var(--gold-line); display: flex; align-items: center; justify-content: center; font-size: 0.76rem; color: var(--gold); font-weight: 600; flex-shrink: 0; }
-    .tcard-name { font-size: 0.83rem; color: var(--cream); font-weight: 500; }
-    .tcard-role { font-size: 0.72rem; color: var(--muted); }
     @media (max-width: 900px) {
       .testi-columns { grid-template-columns: 1fr; height: 420px; }
       .testi-col:nth-child(2), .testi-col:nth-child(3) { display: none; }
@@ -460,6 +454,12 @@
     .cform-hp { position: absolute; left: -9999px; opacity: 0; }
     .cform-note { font-size: 0.75rem; color: var(--muted); line-height: 1.55; }
     @media (max-width: 620px) { .cform-row { grid-template-columns: 1fr; } }
+    .scard-tag {
+      font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--cream); opacity: 0.55; font-weight: 600;
+      margin-bottom: 10px; display: block;
+    }
+    .scard-body { font-size: 0.9rem; color: var(--cream); line-height: 1.68; }
   </style>
   <script src="/ga.js" defer></script>
 </head>
@@ -709,39 +709,39 @@
 <!-- TESTIMONIALS -->
 <section class="testi-section">
   <div class="container">
-    <span class="eyebrow reveal">From the field</span>
-    <h2 class="section-title reveal">What happens when you stop waiting for renders.</h2>
+    <span class="eyebrow reveal">Where it earns its place</span>
+    <h2 class="section-title reveal">The moments this was built for.</h2>
   </div>
   <div class="container" style="max-width:1160px">
     <div class="testi-columns">
       <div class="testi-col">
         <div class="testi-col-inner">
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"We had a serious buyer in the room, the architect was still working. I sent Fanny a floor plan and had visuals by the next morning. The buyer signed before the final plans were done."</p><div class="tcard-author"><div class="tcard-av">MR</div><div><div class="tcard-name">Marc R.</div><div class="tcard-role">Developer · Barcelona</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Before Fanny, I was spending €40k on CGI for one resort concept. Now I test three directions in one session and brief my architect on day one with something to react to."</p><div class="tcard-author"><div class="tcard-av">AK</div><div><div class="tcard-name">Alexandre K.</div><div class="tcard-role">Hospitality Investor · Monaco</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"I had a sketch and a feeling. Fanny sent back four concept directions the same day. My architect was briefed on day one. We saved two weeks of back-and-forth."</p><div class="tcard-author"><div class="tcard-av">JD</div><div><div class="tcard-name">Julien D.</div><div class="tcard-role">Property Developer · Geneva</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"We had a serious buyer in the room, the architect was still working. I sent Fanny a floor plan and had visuals by the next morning. The buyer signed before the final plans were done."</p><div class="tcard-author"><div class="tcard-av">MR</div><div><div class="tcard-name">Marc R.</div><div class="tcard-role">Developer · Barcelona</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Before Fanny, I was spending €40k on CGI for one resort concept. Now I test three directions in one session and brief my architect on day one with something to react to."</p><div class="tcard-author"><div class="tcard-av">AK</div><div><div class="tcard-name">Alexandre K.</div><div class="tcard-role">Hospitality Investor · Monaco</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"I had a sketch and a feeling. Fanny sent back four concept directions the same day. My architect was briefed on day one. We saved two weeks of back-and-forth."</p><div class="tcard-author"><div class="tcard-av">JD</div><div><div class="tcard-name">Julien D.</div><div class="tcard-role">Property Developer · Geneva</div></div></div></div>
+          <div class="tcard"><span class="scard-tag">Before the plans are finished</span><p class="scard-body">A serious buyer is in the room and the architect is still drawing. Send the floor plan tonight, present photorealistic visuals in the morning. The decision stops waiting on the drawings.</p></div>
+          <div class="tcard"><span class="scard-tag">A direction you cannot afford to test</span><p class="scard-body">Testing three concepts used to mean commissioning three sets of renders. Test them in one session and brief your architect with something to react to instead of describe.</p></div>
+          <div class="tcard"><span class="scard-tag">A sketch and a feeling</span><p class="scard-body">No CAD file, no technical brief, no site visit. A hand drawing and a mood board are enough to get several directions back the same day.</p></div>
+          <div class="tcard"><span class="scard-tag">Before the plans are finished</span><p class="scard-body">A serious buyer is in the room and the architect is still drawing. Send the floor plan tonight, present photorealistic visuals in the morning. The decision stops waiting on the drawings.</p></div>
+          <div class="tcard"><span class="scard-tag">A direction you cannot afford to test</span><p class="scard-body">Testing three concepts used to mean commissioning three sets of renders. Test them in one session and brief your architect with something to react to instead of describe.</p></div>
+          <div class="tcard"><span class="scard-tag">A sketch and a feeling</span><p class="scard-body">No CAD file, no technical brief, no site visit. A hand drawing and a mood board are enough to get several directions back the same day.</p></div>
         </div>
       </div>
       <div class="testi-col">
         <div class="testi-col-inner">
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Site visit Tuesday, client presentation Thursday. Two days from a raw construction photo to a fully staged interior — every material exactly right. I sent Fanny one photo and a mood board."</p><div class="tcard-author"><div class="tcard-av">SL</div><div><div class="tcard-name">Sophie L.</div><div class="tcard-role">Interior Architect · Paris</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Our planning committee needed something visual. We had no renders booked. Fanny delivered five views in 36 hours. The submission went in on time. Permission granted."</p><div class="tcard-author"><div class="tcard-av">BM</div><div><div class="tcard-name">Beatriz M.</div><div class="tcard-role">Project Manager · Lisbon</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The investor had no patience for hand-wavy descriptions. Fanny turned our plot brief into a full coastal resort concept — pools, massing, ground level. We opened the meeting with that deck."</p><div class="tcard-author"><div class="tcard-av">TN</div><div><div class="tcard-name">Thomas N.</div><div class="tcard-role">Resort Developer · Dubai</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Site visit Tuesday, client presentation Thursday. Two days from a raw construction photo to a fully staged interior — every material exactly right. I sent Fanny one photo and a mood board."</p><div class="tcard-author"><div class="tcard-av">SL</div><div><div class="tcard-name">Sophie L.</div><div class="tcard-role">Interior Architect · Paris</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Our planning committee needed something visual. We had no renders booked. Fanny delivered five views in 36 hours. The submission went in on time. Permission granted."</p><div class="tcard-author"><div class="tcard-av">BM</div><div><div class="tcard-name">Beatriz M.</div><div class="tcard-role">Project Manager · Lisbon</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The investor had no patience for hand-wavy descriptions. Fanny turned our plot brief into a full coastal resort concept — pools, massing, ground level. We opened the meeting with that deck."</p><div class="tcard-author"><div class="tcard-av">TN</div><div><div class="tcard-name">Thomas N.</div><div class="tcard-role">Resort Developer · Dubai</div></div></div></div>
+          <div class="tcard"><span class="scard-tag">Two days between site visit and pitch</span><p class="scard-body">A raw construction photograph on Tuesday becomes a fully staged interior for Thursday&rsquo;s presentation, with every material specified the way you asked for it.</p></div>
+          <div class="tcard"><span class="scard-tag">A submission with no renders booked</span><p class="scard-body">Planning committees want to see it, not read it. Five views in 36 hours, print-ready at 300 DPI, so the deadline holds.</p></div>
+          <div class="tcard"><span class="scard-tag">An investor who will not sit through a description</span><p class="scard-body">A plot brief becomes a resort concept &mdash; massing, pools, ground level, light. Open the meeting with the image rather than building up to it.</p></div>
+          <div class="tcard"><span class="scard-tag">Two days between site visit and pitch</span><p class="scard-body">A raw construction photograph on Tuesday becomes a fully staged interior for Thursday&rsquo;s presentation, with every material specified the way you asked for it.</p></div>
+          <div class="tcard"><span class="scard-tag">A submission with no renders booked</span><p class="scard-body">Planning committees want to see it, not read it. Five views in 36 hours, print-ready at 300 DPI, so the deadline holds.</p></div>
+          <div class="tcard"><span class="scard-tag">An investor who will not sit through a description</span><p class="scard-body">A plot brief becomes a resort concept &mdash; massing, pools, ground level, light. Open the meeting with the image rather than building up to it.</p></div>
         </div>
       </div>
       <div class="testi-col">
         <div class="testi-col-inner">
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The buyer had already moved on by the time our studio delivered the CGI. With Fanny it was 48 hours. We haven't used a traditional renderer since."</p><div class="tcard-author"><div class="tcard-av">PA</div><div><div class="tcard-name">Pierre A.</div><div class="tcard-role">Real Estate Agent · Paris</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"We had a serious buyer in the room, the architect was still working. I sent Fanny a floor plan and had visuals by the next morning. The buyer signed before the final plans were done."</p><div class="tcard-author"><div class="tcard-av">MR</div><div><div class="tcard-name">Marc R.</div><div class="tcard-role">Developer · Barcelona</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Before Fanny, I was spending €40k on CGI for one resort concept. Now I test three directions in one session and brief my architect on day one with something to react to."</p><div class="tcard-author"><div class="tcard-av">AK</div><div><div class="tcard-name">Alexandre K.</div><div class="tcard-role">Hospitality Investor · Monaco</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"The buyer had already moved on by the time our studio delivered the CGI. With Fanny it was 48 hours. We haven't used a traditional renderer since."</p><div class="tcard-author"><div class="tcard-av">PA</div><div><div class="tcard-name">Pierre A.</div><div class="tcard-role">Real Estate Agent · Paris</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"We had a serious buyer in the room, the architect was still working. I sent Fanny a floor plan and had visuals by the next morning. The buyer signed before the final plans were done."</p><div class="tcard-author"><div class="tcard-av">MR</div><div><div class="tcard-name">Marc R.</div><div class="tcard-role">Developer · Barcelona</div></div></div></div>
-          <div class="tcard"><div class="tcard-stars">★★★★★</div><p class="tcard-quote">"Before Fanny, I was spending €40k on CGI for one resort concept. Now I test three directions in one session and brief my architect on day one with something to react to."</p><div class="tcard-author"><div class="tcard-av">AK</div><div><div class="tcard-name">Alexandre K.</div><div class="tcard-role">Hospitality Investor · Monaco</div></div></div></div>
+          <div class="tcard"><span class="scard-tag">A property that photographs badly in winter</span><p class="scard-body">Golden hour, summer planting and a lit pool at dusk &mdash; from the photographs you already have. No reshoot, no waiting for the season to turn.</p></div>
+          <div class="tcard"><span class="scard-tag">An empty room that reads as small</span><p class="scard-body">Furnished, styled and lit so a buyer can see the life in it. No stager, no rented furniture, no week of scheduling.</p></div>
+          <div class="tcard"><span class="scard-tag">A space nobody can picture full</span><p class="scard-body">A wedding, a long dinner, a party on the terrace. Staged as images without hiring people, a venue or a caterer to find out whether it works.</p></div>
+          <div class="tcard"><span class="scard-tag">A property that photographs badly in winter</span><p class="scard-body">Golden hour, summer planting and a lit pool at dusk &mdash; from the photographs you already have. No reshoot, no waiting for the season to turn.</p></div>
+          <div class="tcard"><span class="scard-tag">An empty room that reads as small</span><p class="scard-body">Furnished, styled and lit so a buyer can see the life in it. No stager, no rented furniture, no week of scheduling.</p></div>
+          <div class="tcard"><span class="scard-tag">A space nobody can picture full</span><p class="scard-body">A wedding, a long dinner, a party on the terrace. Staged as images without hiring people, a venue or a caterer to find out whether it works.</p></div>
         </div>
       </div>
     </div>
